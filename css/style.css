@@ -947,11 +947,20 @@ h1 span { display: block; }
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: var(--blue-soft);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--ink);
 }
 
-.pet-icon svg { width: 26px; height: 26px; }
+.pet-icon svg,
+.pet-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.pet-icon img {
+  filter: contrast(1.5) saturate(1.2) drop-shadow(0 0 0.45px rgba(6, 110, 135, 0.95));
+}
 
 .keluhan { margin-top: 22px; }
 
