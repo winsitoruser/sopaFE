@@ -145,15 +145,22 @@ document.addEventListener("keydown", (event) => {
 });
 
 nav.addEventListener("click", (event) => {
+  if (event.target.closest(".menu-btn")) return;
   if (event.target.closest("a, button")) {
     nav.classList.remove("is-open");
     navToggle.setAttribute("aria-expanded", "false");
   }
 });
 
-document.getElementById("open-search").addEventListener("click", () => {
-  scrollToId("beranda");
-  document.getElementById("q").focus();
+const storeDialog = document.getElementById("store-dialog");
+document.querySelectorAll("[data-download]").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".menu.is-open").forEach((item) => {
+      item.classList.remove("is-open");
+      item.querySelector(".menu-btn")?.setAttribute("aria-expanded", "false");
+    });
+    storeDialog.showModal();
+  });
 });
 
 function visibleDoctors() {
@@ -474,7 +481,7 @@ document.querySelectorAll("[data-close]").forEach((button) => {
   button.addEventListener("click", () => button.closest("dialog")?.close());
 });
 
-[consultDialog, infoDialog].forEach((dialog) => {
+[consultDialog, infoDialog, storeDialog].forEach((dialog) => {
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
   });
@@ -534,6 +541,75 @@ if (newsForm) {
     document.getElementById("news-msg").textContent = `${email} tercatat untuk info SobatPaws. Pratinjau, belum terkirim ke server.`;
     event.currentTarget.reset();
   });
+}
+
+const promoTrack = document.getElementById("promo-track");
+const promoSlides = [...promoTrack.children];
+const promoDots = [...document.querySelectorAll("#promo-dots button")];
+const promoView = document.getElementById("promo-view");
+let promoIndex = 0;
+let promoTimer = 0;
+
+function showPromo(next) {
+  promoIndex = (next + promoSlides.length) % promoSlides.length;
+  promoTrack.style.transform = `translateX(-${promoIndex * 100}%)`;
+  promoSlides.forEach((slide, index) => {
+    const current = index === promoIndex;
+    slide.setAttribute("aria-hidden", String(!current));
+    slide.tabIndex = current ? 0 : -1;
+  });
+  promoDots.forEach((dot, index) => {
+    if (index === promoIndex) dot.setAttribute("aria-current", "true");
+    else dot.removeAttribute("aria-current");
+  });
+}
+
+function queuePromo() {
+  window.clearInterval(promoTimer);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  promoTimer = window.setInterval(() => showPromo(promoIndex + 1), 5500);
+}
+
+document.querySelector(".promo-arrow.is-prev").addEventListener("click", () => {
+  showPromo(promoIndex - 1);
+  queuePromo();
+});
+document.querySelector(".promo-arrow.is-next").addEventListener("click", () => {
+  showPromo(promoIndex + 1);
+  queuePromo();
+});
+promoDots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    showPromo(index);
+    queuePromo();
+  });
+});
+
+let promoStartX = 0;
+promoView.addEventListener("pointerdown", (event) => {
+  if (event.target.closest(".promo-arrow")) return;
+  promoStartX = event.clientX;
+});
+promoView.addEventListener("pointerup", (event) => {
+  if (event.target.closest(".promo-arrow")) return;
+  const delta = event.clientX - promoStartX;
+  if (Math.abs(delta) < 48) return;
+  showPromo(promoIndex + (delta < 0 ? 1 : -1));
+  queuePromo();
+});
+promoView.addEventListener("pointerenter", () => window.clearInterval(promoTimer));
+promoView.addEventListener("pointerleave", queuePromo);
+showPromo(0);
+queuePromo();
+
+const pathSteps = document.querySelector(".path");
+if (pathSteps && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const revealSteps = new IntersectionObserver((entries) => {
+    if (!entries.some((entry) => entry.isIntersecting)) return;
+    pathSteps.classList.add("is-ready");
+    revealSteps.disconnect();
+  }, { threshold: 0.35 });
+  revealSteps.observe(pathSteps);
 }
 
 document.querySelectorAll("section[id], .hero").forEach((section) => {

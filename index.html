@@ -88,50 +88,73 @@
 
   <header class="header">
     <div class="container header-bar">
-      <a class="logo" href="#beranda" aria-label="SobatPaws beranda">
+      <a class="logo" href="https://sobatpaws.com/" aria-label="SobatPaws beranda">
         <img src="assets/img/logo.png" alt="" width="180" height="64" />
       </a>
 
       <nav class="nav" id="nav" aria-label="Navigasi utama">
-        <a href="#beranda" aria-current="page">Beranda</a>
+        <a href="https://sobatpaws.com/#klinik-terdekat">Beranda</a>
         <div class="menu">
           <button class="menu-btn" type="button" aria-expanded="false" aria-haspopup="true">Layanan
             <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="menu-panel">
-            <a href="#kategori">Konsultasi Dokter</a>
-            <button type="button" data-info="info-grooming">Grooming</button>
-            <button type="button" data-info="info-hotel">Pet Hotel</button>
-            <button type="button" data-info="info-clinic">Pet Clinic</button>
+          <div class="menu-panel layanan-panel" id="layanan-dropdown" role="menu" aria-label="Daftar layanan SobatPaws">
+            <div class="layanan-card">
+              <div>
+                <p class="layanan-kicker">Layanan</p>
+                <div class="layanan-grid">
+                  <a role="menuitem" href="https://sobatpaws.com/clinics">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 6v12M8 10h8M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span>
+                    <span><strong>Pet Clinic</strong><small>Kelola layanan medis dan jadwal.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/pet-transport">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 15h16M6 15l1.2-4h9.6L18 15M7 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg></span>
+                    <span><strong>Pet Transport</strong><small>Kelola layanan transportasi hewan.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/pet-hotel">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg></span>
+                    <span><strong>Pet Hotel</strong><small>Kelola operasional pet hotel lebih mudah.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/grooming">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8 6l10 10M10 4l2 2M14 18l-2 2M6 8l2-2"/></svg></span>
+                    <span><strong>Grooming</strong><small>Kelola layanan grooming lebih mudah.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/online-consultation">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H11l-4 3v-3H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg></span>
+                    <span><strong>Konsultasi Online</strong><small>Konsultasi cepat untuk kesehatan hewan kesayangan.</small></span>
+                  </a>
+                </div>
+              </div>
+              <aside class="layanan-promo">
+                <p class="layanan-kicker">Mulai Sekarang</p>
+                <img src="assets/img/nav-promo.jpg" alt="Layanan perawatan hewan peliharaan SobatPaws" width="320" height="200" />
+                <strong>Perawatan Hewan Kesayangan Lebih Mudah</strong>
+                <p>Semua kebutuhan klinik, grooming, hotel, hingga transport dalam satu aplikasi.</p>
+                <button class="layanan-download" type="button" data-download>Download Sekarang</button>
+                <p class="layanan-help">Butuh bantuan memulai?<br />Kami siap membantu.</p>
+                <a class="btn-download is-small" href="https://wa.me/6285117767264" target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
+              </aside>
+            </div>
           </div>
         </div>
-        <div class="menu">
-          <button class="menu-btn" type="button" aria-expanded="false" aria-haspopup="true">Dokter Hewan
-            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="menu-panel">
-            <button type="button" data-filter="kucing">Dokter Kucing</button>
-            <button type="button" data-filter="anjing">Dokter Anjing</button>
-            <button type="button" data-filter="burung">Dokter Burung</button>
-            <button type="button" data-filter="kelinci">Kelinci &amp; Hewan Kecil</button>
-            <button type="button" data-filter="reptil">Reptil &amp; Eksotik</button>
-            <button type="button" data-filter="umum">Konsultasi Umum</button>
-            <a href="#dokter">Semua Dokter</a>
-          </div>
-        </div>
-        <button class="menu-btn" type="button" data-info="info-grooming">Grooming</button>
-        <button class="menu-btn" type="button" data-info="info-hotel">Pet Hotel</button>
-        <button class="menu-btn" type="button" data-info="info-clinic">Pet Clinic</button>
+        <a href="#beranda" aria-current="page">Konsultasi</a>
+        <a href="https://sobatpaws.com/paws-point">Paws Point</a>
+        <a href="https://sobatpaws.com/news">News</a>
+        <a href="https://sobatpaws.com/how-it-works">Cara Kerja</a>
+        <a href="https://sobatpaws.com/sobat">Sobat</a>
       </nav>
 
       <div class="header-actions">
-        <button class="icon-btn" id="open-search" type="button" aria-label="Cari dokter">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </button>
-        <button class="btn btn-yellow btn-header" type="button" data-consult>
-          <span>Konsultasi Sekarang</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
+        <a class="btn-masuk" href="https://sobatpaws.com/login">Masuk</a>
+        <button class="btn-download" type="button" data-download>Download Sekarang</button>
+        <div class="menu menu-lang">
+          <button class="lang-btn menu-btn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Ubah bahasa">
+            <span class="flag" aria-hidden="true"></span>
+          </button>
+          <div class="menu-panel lang-panel">
+            <span class="lang-current">Indonesia</span>
+          </div>
+        </div>
         <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Buka menu">
           <span></span><span></span><span></span>
         </button>
@@ -188,6 +211,35 @@
             <li><i aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></i>Dokter Berpengalaman</li>
             <li><i aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></i>Semua Jenis Hewan</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo" aria-roledescription="carousel" aria-label="Promo SobatPaws">
+      <div class="container">
+        <div class="promo-view" id="promo-view">
+          <div class="promo-track" id="promo-track">
+            <button class="promo-slide" type="button" data-consult>
+              <img src="assets/img/banner-1.png" width="2880" height="840" alt="Ada keluhan pada anabul? Dapatkan arahan awal dari dokter hewan tanpa harus langsung datang ke klinik." />
+            </button>
+            <button class="promo-slide" type="button" data-consult>
+              <img src="assets/img/banner-2.png" width="2880" height="840" alt="Konsultasi hemat, anabul tetap sehat. Konsultasikan langsung dengan dokter hewan secara online." />
+            </button>
+            <a class="promo-slide" href="https://vets.sobatpaws.com/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/banner-3.png" width="1440" height="420" alt="Undang rekan sejawat, raih Paws Point. Bagikan kode referral untuk dokter hewan." />
+            </a>
+          </div>
+          <button class="promo-arrow is-prev" type="button" aria-label="Banner sebelumnya">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M14 6l-6 6 6 6"/></svg>
+          </button>
+          <button class="promo-arrow is-next" type="button" aria-label="Banner berikutnya">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <div class="promo-dots" id="promo-dots">
+          <button type="button" aria-label="Banner 1" aria-current="true"></button>
+          <button type="button" aria-label="Banner 2"></button>
+          <button type="button" aria-label="Banner 3"></button>
         </div>
       </div>
     </section>
@@ -586,7 +638,8 @@
           <ol class="path">
             <li>
               <a class="path-card" href="#dokter">
-                <div class="path-top is-sky">
+                <div class="path-top is-photo">
+                  <img src="assets/img/pilih-dokter.jpg" alt="" width="1024" height="572" />
                   <span>01</span>
                   <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 19c1-3 3-4.5 6-4.5S15 16 16 19"/><circle cx="17" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M19.2 19.2L21 21"/></svg>
                 </div>
@@ -599,7 +652,8 @@
             </li>
             <li>
               <a class="path-card" href="#kategori">
-                <div class="path-top is-sand">
+                <div class="path-top is-photo is-pets">
+                  <img src="assets/img/pilih-hewan.jpg" alt="" width="1024" height="572" />
                   <span>02</span>
                   <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="8" cy="15" rx="3" ry="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="9" r="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="7" r="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="8.2" r="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M14 14h6M17 11v6"/></svg>
                 </div>
@@ -612,7 +666,8 @@
             </li>
             <li>
               <a class="path-card" href="#faq">
-                <div class="path-top is-lilac">
+                <div class="path-top is-photo is-pay">
+                  <img src="assets/img/bayar.jpg" alt="" width="1024" height="572" />
                   <span>03</span>
                   <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path stroke="currentColor" stroke-width="1.6" d="M3 10h18"/></svg>
                 </div>
@@ -625,7 +680,8 @@
             </li>
             <li>
               <button class="path-card is-final" type="button" data-consult>
-                <div class="path-top is-ink">
+                <div class="path-top is-photo is-consult">
+                  <img src="assets/img/konsultasi.jpg" alt="" width="1024" height="572" />
                   <span>04</span>
                   <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="12" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M15 10l6-3v8l-6-3"/></svg>
                 </div>
@@ -878,6 +934,18 @@
       <small>© 2026 Sobat Paws. Hak cipta dilindungi undang-undang</small>
     </div>
   </footer>
+
+  <dialog id="store-dialog" aria-labelledby="store-title">
+    <div class="dialog-card">
+      <button class="icon-x" type="button" data-close aria-label="Tutup">×</button>
+      <h3 id="store-title">Download SobatPaws</h3>
+      <p class="dialog-lead">Pilih toko yang sesuai dengan perangkat Anda.</p>
+      <div class="store-choices">
+        <a class="store" href="https://apps.apple.com/id/app/sobat-paws/id6785621846?l=id" target="_blank" rel="noopener noreferrer">App Store</a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.sobatpaws.user" target="_blank" rel="noopener noreferrer">Google Play</a>
+      </div>
+    </div>
+  </dialog>
 
   <dialog id="consult-dialog" aria-labelledby="consult-title">
     <div class="dialog-card">
