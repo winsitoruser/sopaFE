@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paws Partner | SobatPaws</title>
+  <meta name="description" content="Temukan pet sitter, dog walker, daycare, training, pet taxi, dan pet photography terverifikasi di Paws Partner oleh SobatPaws." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1eb8cc" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/partner.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse fill='%231eb8cc' cx='32' cy='42' rx='12' ry='10'/%3E%3Cellipse fill='%231eb8cc' cx='16' cy='26' rx='6' ry='8'/%3E%3Cellipse fill='%231eb8cc' cx='27' cy='15' rx='5.5' ry='7'/%3E%3Cellipse fill='%231eb8cc' cx='39' cy='15' rx='5.5' ry='7'/%3E%3Cellipse fill='%231eb8cc' cx='49' cy='26' rx='6' ry='8'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip" href="#konten">Loncat ke konten</a>
+
+  <header class="header">
+    <div class="container header-bar">
+      <a class="logo" href="https://sobatpaws.com/" aria-label="SobatPaws beranda">
+        <img src="assets/img/logo.png" alt="" width="180" height="64" />
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigasi utama">
+        <a href="https://sobatpaws.com/#klinik-terdekat">Beranda</a>
+        <div class="menu">
+          <button class="menu-btn" type="button" aria-expanded="false" aria-haspopup="true">Layanan
+            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="menu-panel layanan-panel" role="menu" aria-label="Daftar layanan SobatPaws">
+            <div class="layanan-card">
+              <div>
+                <p class="layanan-kicker">Layanan</p>
+                <div class="layanan-grid">
+                  <a role="menuitem" href="https://sobatpaws.com/clinics">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 6v12M8 10h8M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span>
+                    <span><strong>Pet Clinic</strong><small>Kelola layanan medis dan jadwal.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/pet-transport">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 15h16M6 15l1.2-4h9.6L18 15M7 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg></span>
+                    <span><strong>Pet Transport</strong><small>Kelola layanan transportasi hewan.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/pet-hotel">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg></span>
+                    <span><strong>Pet Hotel</strong><small>Kelola operasional pet hotel lebih mudah.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/grooming">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8 6l10 10M10 4l2 2M14 18l-2 2M6 8l2-2"/></svg></span>
+                    <span><strong>Grooming</strong><small>Kelola layanan grooming lebih mudah.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/online-consultation">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H11l-4 3v-3H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg></span>
+                    <span><strong>Konsultasi Online</strong><small>Konsultasi cepat untuk kesehatan hewan kesayangan.</small></span>
+                  </a>
+                  <a role="menuitem" href="paws-partner.html">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="16.5" rx="3.2" ry="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="7.2" cy="11.2" rx="1.5" ry="2.1" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="10.4" cy="8.4" rx="1.4" ry="1.9" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="13.8" cy="8.4" rx="1.4" ry="1.9" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="16.9" cy="11.2" rx="1.5" ry="2.1" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                    <span><strong>Paws Partner</strong><small>Pet sitter, dog walker, dan mitra pet care.</small></span>
+                  </a>
+                </div>
+              </div>
+              <aside class="layanan-promo">
+                <p class="layanan-kicker">Mulai Sekarang</p>
+                <img src="assets/img/nav-promo.jpg" alt="Layanan perawatan hewan peliharaan SobatPaws" width="320" height="200" />
+                <strong>Perawatan Hewan Kesayangan Lebih Mudah</strong>
+                <p>Semua kebutuhan klinik, grooming, hotel, hingga transport dalam satu aplikasi.</p>
+                <button class="layanan-download" type="button" data-download>Download Sekarang</button>
+                <p class="layanan-help">Butuh bantuan memulai?<br />Kami siap membantu.</p>
+                <a class="btn-download is-small" href="https://wa.me/6285117767264" target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
+              </aside>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#beranda">Konsultasi</a>
+        <a href="https://sobatpaws.com/paws-point">Paws Point</a>
+        <a href="https://sobatpaws.com/news">News</a>
+        <a href="https://sobatpaws.com/how-it-works">Cara Kerja</a>
+        <a href="https://sobatpaws.com/sobat">Sobat</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn-masuk" href="https://sobatpaws.com/login">Masuk</a>
+        <button class="btn-download" type="button" data-download>Download Sekarang</button>
+        <div class="menu menu-lang">
+          <button class="lang-btn menu-btn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Ubah bahasa">
+            <span class="flag" aria-hidden="true"></span>
+          </button>
+          <div class="menu-panel lang-panel">
+            <span class="lang-current">Indonesia</span>
+          </div>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Buka menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="konten">
+    <section class="pp-hero" aria-labelledby="hero-title">
+      <div class="pp-wrap pp-hero-grid">
+        <div>
+          <p class="pp-kicker">Paws Partner — by SobatPaws</p>
+          <h1 id="hero-title">Ada yang Bantu Jaga Anabul, Kamu Lebih Tenang.</h1>
+          <p class="pp-lead">Saat jadwalmu padat, mitra terverifikasi bisa menjaga di rumah, mengajak jalan, menitipkan seharian, melatih, mengantar, atau memotret anabul. Bandingkan yang terdekat, lalu lanjut ke pembayaran.</p>
+          <div class="pp-hero-cta">
+            <a class="pp-btn pp-btn-fill" href="#rencana">Rencanakan layanan</a>
+            <a class="pp-btn pp-btn-line" href="#mitra">Lihat partner</a>
+          </div>
+          <ul class="pp-trust">
+            <li>Profil terverifikasi</li>
+            <li>Kabar foto selama sesi</li>
+            <li>Tarif mulai terlihat sebelum pilih</li>
+          </ul>
+        </div>
+        <div class="pp-hero-visual">
+          <span class="pp-blob pp-blob-a" aria-hidden="true"></span>
+          <span class="pp-blob pp-blob-b" aria-hidden="true"></span>
+          <span class="pp-blob pp-blob-c" aria-hidden="true"></span>
+          <div class="pp-orbit">
+            <img src="assets/img/partner/hero-partner.jpg" alt="Partner SobatPaws berjalan bersama anjing dan menggendong kucing" width="934" height="1024" />
+          </div>
+          <aside class="pp-verify">
+            <strong>Paws Partner</strong>
+            <span>Terverifikasi</span>
+            <b>★ 4.9</b>
+          </aside>
+          <img class="pp-float pp-float-dog" src="assets/img/dog-smile.jpg" alt="" width="200" height="200" />
+          <img class="pp-float pp-float-cat" src="assets/img/cat.jpg" alt="" width="200" height="200" />
+          <img class="pp-float pp-float-dog2" src="assets/img/partner/p5.jpg" alt="" width="200" height="200" />
+          <img class="pp-float pp-float-cat2" src="assets/img/partner/p4.jpg" alt="" width="200" height="200" />
+        </div>
+      </div>
+      <svg class="pp-wave" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+        <path fill="#7fdcea" d="M0 90c160 40 300 60 480 28 220-40 380 24 600 8 150-10 250-36 360-18v52H0z" />
+        <path fill="#1eb8cc" d="M0 118c180 28 360-16 560 8 240 30 420-8 880-16v50H0z" />
+      </svg>
+    </section>
+
+    <div class="pp-wrap">
+      <section class="pp-search" id="cari" aria-labelledby="cari-title">
+        <h2 id="cari-title">Cari Paws Partner</h2>
+        <p class="pp-sub">Saring menurut layanan, kota, anjing atau kucing, dan tanggal. Hasilnya langsung menyesuaikan daftar di bawah.</p>
+        <form class="pp-fields" id="search-form">
+          <label class="pp-field">
+            <span>Pilih Layanan</span>
+            <select name="layanan" id="search-service">
+              <option value="Semua">Semua layanan</option>
+              <option>Pet Sitting</option>
+              <option>Dog Walking</option>
+              <option>Daycare</option>
+              <option>Training</option>
+              <option>Pet Taxi</option>
+              <option>Photography</option>
+            </select>
+          </label>
+          <label class="pp-field">
+            <span>Lokasi</span>
+            <select name="lokasi" id="search-area">
+              <option value="">Semua lokasi</option>
+              <option>Jakarta Selatan</option>
+              <option>Jakarta Pusat</option>
+              <option>Tangerang</option>
+              <option>Depok</option>
+              <option>Bekasi</option>
+            </select>
+          </label>
+          <label class="pp-field">
+            <span>Jenis Hewan</span>
+            <select name="hewan" id="search-pet">
+              <option value="">Semua hewan</option>
+              <option value="anjing">Anjing</option>
+              <option value="kucing">Kucing</option>
+            </select>
+          </label>
+          <label class="pp-field">
+            <span>Pilih Tanggal</span>
+            <input type="date" name="tanggal" id="search-date" />
+          </label>
+          <button class="pp-btn pp-btn-fill" type="submit">Cari Partner</button>
+        </form>
+      </section>
+
+      <section class="pp-section" id="mitra" aria-labelledby="mitra-title">
+        <div class="pp-head">
+          <h2 id="mitra-title">Kenalan dengan calon teman anabulmu</h2>
+          <p>Geser peta atau pilih kota. Partner diurutkan dari yang paling dekat dengan lokasimu.</p>
+        </div>
+        <div class="pp-browse is-folded">
+        <div class="pp-browse-list">
+        <div class="pp-locate">
+          <p id="origin-label">Jarak dari Jakarta Selatan</p>
+          <div class="pp-locate-actions">
+            <button class="pp-btn pp-btn-ghost" type="button" id="map-toggle" aria-expanded="false">Tampilkan peta</button>
+            <button class="pp-btn pp-btn-ghost" type="button" id="use-location">Pakai lokasi saya</button>
+          </div>
+        </div>
+        <div class="pp-filters" role="toolbar" aria-label="Saring partner">
+          <button class="pp-chip" type="button" data-filter="Semua" aria-pressed="true">Semua</button>
+          <button class="pp-chip" type="button" data-filter="Pet Sitting" aria-pressed="false">Pet Sitting</button>
+          <button class="pp-chip" type="button" data-filter="Dog Walking" aria-pressed="false">Dog Walking</button>
+          <button class="pp-chip" type="button" data-filter="Daycare" aria-pressed="false">Daycare</button>
+          <button class="pp-chip" type="button" data-filter="Training" aria-pressed="false">Training</button>
+          <button class="pp-chip" type="button" data-filter="Pet Taxi" aria-pressed="false">Pet Taxi</button>
+          <button class="pp-chip" type="button" data-filter="Photography" aria-pressed="false">Photography</button>
+          <label class="pp-sort">Sorting
+            <select id="sort-by" aria-label="Urutkan partner">
+              <option value="near" selected>Terdekat</option>
+              <option value="recommend">Rekomendasi</option>
+              <option value="rating">Rating tertinggi</option>
+              <option value="price">Harga terendah</option>
+              <option value="reviews">Ulasan terbanyak</option>
+            </select>
+          </label>
+        </div>
+        <div class="pp-grid" id="partner-grid">
+          <article class="pp-card" data-service="Pet Sitting" data-area="Jakarta Selatan" data-pets="anjing kucing" data-rating="4.9" data-reviews="12" data-price="75000" data-km="0.8" data-lat="-6.2439" data-lng="106.8004" data-name="Naya Putri" data-photo="assets/img/ava-1.jpg" data-includes="Kasih makan, ganti air, bersihkan area, dan kirim foto. Obat diberikan hanya sesuai catatanmu." data-bio="Naya datang ke rumah untuk jaga anjing atau kucing saat kamu kerja atau bepergian. Ia mengikuti jam makan yang kamu tulis dan mengirim foto di awal serta akhir sesi.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/ava-1.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Naya Putri</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 0.8 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Jaga anjing dan kucing di rumah, lengkap foto tiap sesi.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Pet Sitting</span>
+            <p class="pp-score" aria-label="Rating 4,9 dari 5, 12 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,9</b><span>12 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 75.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Dog Walking" data-area="Jakarta Selatan" data-pets="anjing" data-rating="4.8" data-reviews="12" data-price="75000" data-km="1.2" data-lat="-6.2836" data-lng="106.8052" data-name="Bagas Pratama" data-photo="assets/img/ava-2.jpg" data-includes="Jalan 30–45 menit di rute yang kamu setujui, plus catatan energi dan foto." data-bio="Bagas mengajak jalan anjing yang butuh keluar rumah. Ia menyesuaikan tempo dengan usia anjing dan menghindari rute yang kamu larang.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/ava-2.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Bagas Pratama</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1.2 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Jalan pagi atau sore untuk anjing yang butuh keluar.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Dog Walking</span>
+            <p class="pp-score" aria-label="Rating 4,8 dari 5, 12 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,8</b><span>12 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 75.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Daycare" data-area="Jakarta Selatan" data-pets="anjing kucing" data-rating="4.8" data-reviews="16" data-price="50000" data-km="0.4" data-lat="-6.2358" data-lng="106.8086" data-name="Siska Amelia" data-photo="assets/img/ava-4.jpg" data-includes="Penitipan jam kerja, jadwal makan, waktu main, dan kabar sebelum dijemput." data-bio="Siska menerima anjing dan kucing untuk daycare seharian. Ada jeda istirahat, dan kondisi anabul dilaporkan sebelum kamu menjemput.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/ava-4.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Siska Amelia</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 0.4 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Daycare seharian dengan makan, main, dan kabar jemput.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Daycare</span>
+            <p class="pp-score" aria-label="Rating 4,8 dari 5, 16 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,8</b><span>16 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 50.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Pet Sitting" data-area="Jakarta Selatan" data-pets="kucing" data-rating="4.9" data-reviews="18" data-price="65000" data-km="2.1" data-lat="-6.2524" data-lng="106.8447" data-name="Intan Sari" data-includes="Khusus kucing: makan, litter, dan ditemani tanpa dipaksa diangkat." data-photo="assets/img/candidates/c7.jpg" data-bio="Intan hanya menerima kucing. Ia memberi makan, membersihkan litter, dan menemani kucing pemalu tanpa memaksa diangkat.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c7.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Intan Sari</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 2.1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Khusus kucing: makan, litter, tanpa dipaksa diangkat.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Pet Sitting</span>
+            <p class="pp-score" aria-label="Rating 4,9 dari 5, 121 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,9</b><span>5 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 65.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Daycare" data-area="Jakarta Pusat" data-pets="anjing" data-rating="4.7" data-reviews="13" data-price="45000" data-km="3.6" data-lat="-6.1944" data-lng="106.8294" data-name="Siska Pratama" data-photo="assets/img/candidates/c6.jpg" data-includes="Main terarah, istirahat, dan satu foto di tengah hari." data-bio="Siska Pratama menitipkan anjing yang butuh teman bermain. Sesi punya jadwal istirahat dan update foto sekitar siang.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c6.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Siska Pratama</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 3.6 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Penitipan anjing dengan main, istirahat, dan foto siang.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Daycare</span>
+            <p class="pp-score" aria-label="Rating 4,7 dari 5, 13 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,7</b><span>13 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 45.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Pet Taxi" data-area="Jakarta Selatan" data-pets="anjing kucing" data-rating="4.8" data-reviews="15" data-price="50000" data-km="1.8" data-lat="-6.2910" data-lng="106.8270" data-name="Dimas Arya" data-photo="assets/img/doc-2.jpg" data-includes="Antar atau jemput sekali jalan, dengan kandang dan kabar saat tiba." data-bio="Dimas mengantar anjing atau kucing ke klinik, grooming, atau rumah keluarga. Anabul ditempatkan di kandang dan kamu dapat kabar begitu sampai.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/doc-2.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Dimas Arya</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1.8 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Antar jemput ke klinik atau grooming, dengan kabar tiba.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Pet Taxi</span>
+            <p class="pp-score" aria-label="Rating 4,8 dari 5, 15 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,8</b><span>15 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 50.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card is-extra" hidden data-service="Training" data-area="Tangerang" data-pets="anjing" data-rating="4.8" data-reviews="14" data-price="150000" data-km="4.2" data-lat="-6.2234" data-lng="106.6527" data-name="Dinda Prameswari" data-photo="assets/img/candidates/c3.jpg" data-includes="Satu sesi latihan dasar di rumah atau taman, plus catatan untuk dilanjutkan." data-bio="Dinda melatih duduk, diam, dan jalan tanpa menarik tali. Latihan dilakukan di rumah atau taman, lalu kamu dapat catatan untuk dilanjutkan sendiri.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c3.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Dinda Prameswari</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 4.2 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Latihan dasar duduk, diam, dan jalan.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Training</span>
+            <p class="pp-score" aria-label="Rating 4,8 dari 5, 14 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,8</b><span>14 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 150.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card is-extra" hidden data-service="Photography" data-area="Depok" data-pets="anjing kucing" data-rating="5" data-reviews="21" data-price="200000" data-km="2.7" data-lat="-6.3726" data-lng="106.8340" data-name="Raka Wijaya" data-photo="assets/img/doc-3.jpg" data-includes="Sesi foto 45 menit dan pilihan foto dikirim di hari yang sama." data-bio="Raka memotret anjing atau kucing di rumah maupun taman. Sesi mengikuti tempo anabul, dan pilihan foto dikirim di hari yang sama.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/doc-3.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Raka Wijaya</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 2.7 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Sesi foto anabul di rumah atau taman.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Photography</span>
+            <p class="pp-score" aria-label="Rating 5 dari 5, 8 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">5</b><span>8 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 200.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Pet Sitting" data-area="Bekasi" data-pets="kucing" data-rating="4.8" data-reviews="19" data-price="70000" data-km="2.4" data-lat="-6.221" data-lng="106.989" data-name="Lala Maharani" data-photo="assets/img/ava-3.jpg" data-includes="Kasih makan, litter, dan kabar foto." data-bio="Lala menjaga kucing di rumah. Ia mengikuti jam makan dan mengirim foto siang.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/ava-3.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Lala Maharani</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Jaga kucing di rumah, litter dan foto siang.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Pet Sitting</span>
+            <p class="pp-score" aria-label="Rating 4,8 dari 5, 19 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,8</b><span>19 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 70.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Pet Sitting" data-area="Depok" data-pets="anjing kucing" data-rating="4.9" data-reviews="22" data-price="80000" data-km="2.3" data-lat="-6.391" data-lng="106.812" data-name="Gita Anggraini" data-photo="assets/img/candidates/c1.jpg" data-includes="Makan, air, dan obat sesuai jadwal tertulis." data-bio="Gita datang ke rumah untuk anjing atau kucing dan mengikuti catatan obat yang kamu tulis.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c1.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Gita Anggraini</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Jaga anjing atau kucing, lengkap catatan obat.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Pet Sitting</span>
+            <p class="pp-score" aria-label="Rating 4,9 dari 5, 22 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,9</b><span>22 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 80.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Dog Walking" data-area="Jakarta Selatan" data-pets="anjing" data-rating="4.8" data-reviews="17" data-price="70000" data-km="2.3" data-lat="-6.27" data-lng="106.792" data-name="Reza Mahendra" data-photo="assets/img/doc-1.jpg" data-includes="Jalan 30–45 menit dan satu foto." data-bio="Reza mengajak jalan anjing dengan tempo yang disesuaikan usia.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/doc-1.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Reza Mahendra</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Jalan sore 40 menit di rute yang disepakati.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Dog Walking</span>
+            <p class="pp-score" aria-label="Rating 4,8 dari 5, 17 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,8</b><span>17 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 70.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Dog Walking" data-area="Tangerang" data-pets="anjing" data-rating="4.7" data-reviews="15" data-price="65000" data-km="1.9" data-lat="-6.214" data-lng="106.64" data-name="Farhan Yusuf" data-photo="assets/img/candidates/c2.jpg" data-includes="Rute taman dan catatan energi." data-bio="Farhan mengajak jalan pagi dan menghindari rute yang kamu larang.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c2.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Farhan Yusuf</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Jalan pagi untuk anjing yang butuh keluar.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Dog Walking</span>
+            <p class="pp-score" aria-label="Rating 4,7 dari 5, 15 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,7</b><span>15 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 65.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Dog Walking" data-area="Bekasi" data-pets="anjing" data-rating="4.9" data-reviews="24" data-price="80000" data-km="2" data-lat="-6.25" data-lng="106.962" data-name="Yoga Pratama" data-photo="assets/img/ava-2.jpg" data-includes="Jalan pendek dan foto di akhir sesi." data-bio="Yoga menyesuaikan jarak jalan dengan usia dan kondisi anjing.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/ava-2.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Yoga Pratama</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Jalan santai untuk anjing senior.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Dog Walking</span>
+            <p class="pp-score" aria-label="Rating 4,9 dari 5, 24 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,9</b><span>24 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 80.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Daycare" data-area="Depok" data-pets="anjing kucing" data-rating="4.8" data-reviews="20" data-price="55000" data-km="1.8" data-lat="-6.41" data-lng="106.78" data-name="Maya Lestari" data-photo="assets/img/candidates/c4.jpg" data-includes="Main, istirahat, makan, dan kabar jemput." data-bio="Maya menerima anjing dan kucing untuk penitipan jam kerja.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c4.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Maya Lestari</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Daycare seharian dengan main dan kabar jemput.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Daycare</span>
+            <p class="pp-score" aria-label="Rating 4,8 dari 5, 20 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,8</b><span>20 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 55.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Daycare" data-area="Bekasi" data-pets="kucing" data-rating="4.9" data-reviews="16" data-price="60000" data-km="2.9" data-lat="-6.232" data-lng="107.001" data-name="Nina Kartika" data-photo="assets/img/candidates/c5.jpg" data-includes="Makan, litter, dan satu foto siang." data-bio="Nina menitipkan kucing di ruang yang tenang dan mengirim kabar siang.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c5.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Nina Kartika</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Penitipan kucing dengan ruang istirahat tenang.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Daycare</span>
+            <p class="pp-score" aria-label="Rating 4,9 dari 5, 16 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,9</b><span>16 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 60.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Training" data-area="Jakarta Selatan" data-pets="anjing" data-rating="4.8" data-reviews="23" data-price="160000" data-km="2" data-lat="-6.248" data-lng="106.822" data-name="Arif Wicaksono" data-photo="assets/img/doc-2.jpg" data-includes="Satu sesi dasar plus catatan lanjutan." data-bio="Arif melatih perintah dasar di rumah atau taman.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/doc-2.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Arif Wicaksono</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Latihan duduk, diam, dan jalan tanpa menarik.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Training</span>
+            <p class="pp-score" aria-label="Rating 4,8 dari 5, 23 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,8</b><span>23 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 160.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Training" data-area="Jakarta Pusat" data-pets="anjing" data-rating="4.9" data-reviews="18" data-price="140000" data-km="1.4" data-lat="-6.176" data-lng="106.842" data-name="Hana Putri" data-photo="assets/img/candidates/c8.jpg" data-includes="Sesi di rumah dan catatan untuk pemilik." data-bio="Hana melatih kebiasaan dasar dengan tempo yang sabar.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c8.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Hana Putri</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Latihan dasar untuk anjing yang baru di rumah.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Training</span>
+            <p class="pp-score" aria-label="Rating 4,9 dari 5, 18 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,9</b><span>18 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 140.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Training" data-area="Depok" data-pets="anjing" data-rating="4.7" data-reviews="12" data-price="130000" data-km="4.4" data-lat="-6.385" data-lng="106.83" data-name="Bayu Santoso" data-photo="assets/img/candidates/c2.jpg" data-includes="Latihan tali dan catatan latihan rumah." data-bio="Bayu fokus pada jalan tanpa menarik tali.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c2.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Bayu Santoso</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Latihan jalan di taman tanpa menarik tali.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Training</span>
+            <p class="pp-score" aria-label="Rating 4,7 dari 5, 12 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,7</b><span>12 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 130.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Pet Taxi" data-area="Jakarta Pusat" data-pets="anjing kucing" data-rating="4.8" data-reviews="14" data-price="55000" data-km="2" data-lat="-6.198" data-lng="106.82" data-name="Rudi Hartono" data-photo="assets/img/doc-1.jpg" data-includes="Sekali jalan, kandang, dan kabar tiba." data-bio="Rudi mengantar anabul ke klinik atau grooming.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/doc-1.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Rudi Hartono</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Antar jemput ke klinik dengan kabar saat tiba.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Pet Taxi</span>
+            <p class="pp-score" aria-label="Rating 4,8 dari 5, 14 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,8</b><span>14 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 55.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Pet Taxi" data-area="Tangerang" data-pets="anjing kucing" data-rating="4.6" data-reviews="13" data-price="50000" data-km="2.2" data-lat="-6.19" data-lng="106.668" data-name="Eka Saputra" data-photo="assets/img/ava-2.jpg" data-includes="Antar atau jemput sekali jalan." data-bio="Eka menjemput anabul dan memberi kabar begitu sampai.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/ava-2.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Eka Saputra</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Jemput ke grooming dan antar pulang.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Pet Taxi</span>
+            <p class="pp-score" aria-label="Rating 4,6 dari 5, 13 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,6</b><span>13 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 50.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Pet Taxi" data-area="Bekasi" data-pets="kucing" data-rating="4.9" data-reviews="25" data-price="60000" data-km="1.8" data-lat="-6.245" data-lng="106.99" data-name="Wulan Sari" data-photo="assets/img/candidates/c7.jpg" data-includes="Kandang, sekali jalan, dan kabar tiba." data-bio="Wulan khusus mengantar kucing dengan kandang tertutup.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c7.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Wulan Sari</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Antar kucing ke klinik dengan kandang tertutup.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Pet Taxi</span>
+            <p class="pp-score" aria-label="Rating 4,9 dari 5, 25 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,9</b><span>25 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 60.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Photography" data-area="Jakarta Selatan" data-pets="anjing kucing" data-rating="5.0" data-reviews="19" data-price="180000" data-km="1" data-lat="-6.255" data-lng="106.805" data-name="Sari Melati" data-photo="assets/img/candidates/c1.jpg" data-includes="Sesi 45 menit, foto dikirim hari yang sama." data-bio="Sari memotret mengikuti tempo anabul.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/candidates/c1.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Sari Melati</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Sesi foto 45 menit di taman atau rumah.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Photography</span>
+            <p class="pp-score" aria-label="Rating 5,0 dari 5, 19 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">5,0</b><span>19 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 180.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Photography" data-area="Jakarta Pusat" data-pets="anjing" data-rating="4.8" data-reviews="16" data-price="170000" data-km="1.8" data-lat="-6.188" data-lng="106.85" data-name="Kevin Ardi" data-photo="assets/img/doc-3.jpg" data-includes="Sesi foto dan pilihan foto di hari yang sama." data-bio="Kevin memotret anjing di rumah dengan jeda istirahat.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/doc-3.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Kevin Ardi</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Foto anjing di rumah, hasil dipilih hari yang sama.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Photography</span>
+            <p class="pp-score" aria-label="Rating 4,8 dari 5, 16 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,8</b><span>16 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 170.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+
+          <article class="pp-card" data-service="Photography" data-area="Tangerang" data-pets="anjing kucing" data-rating="4.9" data-reviews="22" data-price="190000" data-km="3.1" data-lat="-6.23" data-lng="106.655" data-name="Tasya Nur" data-photo="assets/img/ava-4.jpg" data-includes="45 menit dan pilihan foto hari yang sama." data-bio="Tasya mengikuti tempo anabul selama sesi foto.">
+            <div class="pp-who">
+              <img class="pp-avatar" src="assets/img/ava-4.jpg" alt="" width="52" height="52" />
+              <div class="pp-id">
+                <div class="pp-name-row">
+                  <h3>Tasya Nur</h3>
+                  <span class="pp-verified" aria-label="Terverifikasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12l5 5 9-9"/></svg></span>
+                </div>
+                <p class="pp-km"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> 1 km</p>
+              </div>
+            </div>
+            <p class="pp-blurb"><span>Sesi foto santai di taman.</span><button class="pp-more" type="button" data-profile>Selengkapnya</button></p>
+            <span class="pp-pill">Photography</span>
+            <p class="pp-score" aria-label="Rating 4,9 dari 5, 22 ulasan"><span class="pp-stars" aria-hidden="true"><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b><b class="is-on">★</b></span><b class="pp-rate">4,9</b><span>22 ulasan</span></p>
+            <div class="pp-fare">
+              <p>Tarif mulai dari</p>
+              <div class="pp-fare-row"><span class="pp-fare-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg> Layanan</span><strong>Rp 190.000</strong></div>
+            </div>
+            <button class="pp-btn pp-btn-fill" type="button" data-profile>Lihat Detail</button>
+          </article>
+        </div>
+        <p class="pp-empty" id="partner-empty" hidden>Belum ada partner yang cocok dengan filter ini. Coba ubah layanan, lokasi, atau jenis hewan.</p>
+        <div class="pp-list-foot">
+          <p>Menampilkan <span id="shown-count">1–16</span> dari <span id="total-count">24</span> profil</p>
+          <div class="pp-pager-tools">
+            <label class="pp-page-view" id="page-view-wrap" hidden>Per halaman
+              <select id="page-view" aria-label="Jumlah profil per halaman">
+                <option value="12">12</option>
+                <option value="16" selected>16</option>
+                <option value="24">24</option>
+              </select>
+            </label>
+            <nav class="pp-pager" id="partner-pager" hidden aria-label="Halaman partner"></nav>
+            <button class="pp-btn pp-btn-ghost" type="button" id="show-all">Lihat Semua Paws Partner</button>
+          </div>
+        </div>
+        </div>
+        <div class="pp-browse-map">
+          <div id="partner-map" role="region" aria-label="Peta partner terdekat"></div>
+          <button class="pp-map-here" type="button" id="map-here" hidden>Cari di daerah sini</button>
+        </div>
+        </div>
+      </section>
+
+      <section class="pp-section" id="tantangan" aria-labelledby="tantangan-title">
+        <div class="pp-head">
+          <h2 id="tantangan-title">Masalah / Tantangan Pet Owner</h2>
+          <p>Empat situasi yang paling sering muncul, dan cara Paws Partner menanggapinya.</p>
+        </div>
+        <div class="pp-problems">
+          <article class="pp-problem">
+            <div class="pp-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8 3v4M16 3v4M4 10h16"/></svg></div>
+            <h3>Jadwal yang Padat</h3>
+            <p>Dinas, rapat, atau perjalanan bikin jam makan, litter, dan jalan sering terlewat.</p>
+            <p class="pp-fix">Tulis jam kedatangan. Partner yang kosong di tanggal itu yang ditampilkan.</p>
+          </article>
+          <article class="pp-problem">
+            <div class="pp-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M16 16l4 4"/></svg></div>
+            <h3>Sulit Cari yang Cocok</h3>
+            <p>Rekomendasi dari grup chat belum tentu dekat, menerima kucing, atau paham anabul pemalu.</p>
+            <p class="pp-fix">Filter lokasi, jenis hewan, dan layanan. Profil menampilkan apa yang dikerjakan.</p>
+          </article>
+          <article class="pp-problem">
+            <div class="pp-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 11l8-6 8 6v8a1 1 0 0 1-1 1h-5v-5H10v5H5a1 1 0 0 1-1-1v-8z"/></svg></div>
+            <h3>Khawatir Meninggalkan</h3>
+            <p>Pergi seharian terasa berat kalau tidak ada kabar dari rumah.</p>
+            <p class="pp-fix">Minta foto di awal, tengah, dan akhir sesi lewat catatan rencana.</p>
+          </article>
+          <article class="pp-problem">
+            <div class="pp-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M7 7h11l-1.2 9H8.2L7 7zM9 7l.6-2h4.8L15 7M9 20h.01M15 20h.01"/></svg></div>
+            <h3>Pemesanan Terpisah-pisah</h3>
+            <p>Sitting di satu chat, antar ke klinik di chat lain, bayar di rekening yang berbeda.</p>
+            <p class="pp-fix">Satu rencana, satu rekomendasi, lalu lanjut ke halaman bayar.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pp-section" id="layanan" aria-labelledby="layanan-title">
+        <div class="pp-head">
+          <h2 id="layanan-title">Layanan Populer Kami</h2>
+          <p>Harga “Mulai dari” adalah rata-rata tarif partner untuk layanan itu. Geser kartu untuk melihat isi tiap sesi.</p>
+        </div>
+        <div class="pp-tour" data-tour>
+          <div class="pp-tour-nav">
+            <button class="pp-tour-arrow" type="button" data-tour-prev aria-label="Layanan sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="pp-tour-all" type="button" id="tour-all">Lihat Semua Layanan</button>
+            <button class="pp-tour-arrow" type="button" data-tour-next aria-label="Layanan berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+          <div class="pp-tour-stage">
+            <article class="pp-tour-card" data-service="Pet Sitting" style="background-image:url('assets/img/partner/p3.jpg')">
+              <div class="pp-tour-body">
+                <div class="pp-tour-top"><h3>Pet Sitting</h3><span class="pp-tour-tag">Rumah</span></div>
+                <p class="pp-tour-copy">Di rumahmu: makan, air, area bersih, dan foto. Obat hanya sesuai catatan.</p>
+                <p class="pp-tour-price" data-avg>Mulai dari</p>
+                <button class="pp-tour-go" type="button" data-filter="Pet Sitting">Pesan Sekarang</button>
+              </div>
+            </article>
+            <article class="pp-tour-card" data-service="Dog Walking" style="background-image:url('assets/img/partner/p2.jpg')">
+              <div class="pp-tour-body">
+                <div class="pp-tour-top"><h3>Dog Walking</h3><span class="pp-tour-tag">Taman</span></div>
+                <p class="pp-tour-copy">Jalan 30–45 menit di rute yang kamu setujui, untuk anjing saja.</p>
+                <p class="pp-tour-price" data-avg>Mulai dari</p>
+                <button class="pp-tour-go" type="button" data-filter="Dog Walking">Pesan Sekarang</button>
+              </div>
+            </article>
+            <article class="pp-tour-card" data-service="Daycare" style="background-image:url('assets/img/partner/p1.jpg')">
+              <div class="pp-tour-body">
+                <div class="pp-tour-top"><h3>Pet Daycare</h3><span class="pp-tour-tag">Harian</span></div>
+                <p class="pp-tour-copy">Titip seharian: main, istirahat, makan, dan kabar sebelum dijemput.</p>
+                <p class="pp-tour-price" data-avg>Mulai dari</p>
+                <button class="pp-tour-go" type="button" data-filter="Daycare">Pesan Sekarang</button>
+              </div>
+            </article>
+            <article class="pp-tour-card" data-service="Training" style="background-image:url('assets/img/partner/p5.jpg')">
+              <div class="pp-tour-body">
+                <div class="pp-tour-top"><h3>Pet Training</h3><span class="pp-tour-tag">Edukasi</span></div>
+                <p class="pp-tour-copy">Duduk, diam, dan jalan tanpa menarik tali, plus catatan lanjutan.</p>
+                <p class="pp-tour-price" data-avg>Mulai dari</p>
+                <button class="pp-tour-go" type="button" data-filter="Training">Pesan Sekarang</button>
+              </div>
+            </article>
+            <article class="pp-tour-card" data-service="Pet Taxi" style="background-image:url('assets/img/partner/p6.jpg')">
+              <div class="pp-tour-body">
+                <div class="pp-tour-top"><h3>Pet Taxi</h3><span class="pp-tour-tag">Transport</span></div>
+                <p class="pp-tour-copy">Sekali jalan ke klinik, grooming, atau rumah, dengan kandang dan kabar tiba.</p>
+                <p class="pp-tour-price" data-avg>Mulai dari</p>
+                <button class="pp-tour-go" type="button" data-filter="Pet Taxi">Pesan Sekarang</button>
+              </div>
+            </article>
+            <article class="pp-tour-card" data-service="Photography" style="background-image:url('assets/img/partner/p4.jpg')">
+              <div class="pp-tour-body">
+                <div class="pp-tour-top"><h3>Pet Photography</h3><span class="pp-tour-tag">Momen</span></div>
+                <p class="pp-tour-copy">Sesi 45 menit di rumah atau taman. Pilihan foto dikirim hari yang sama.</p>
+                <p class="pp-tour-price" data-avg>Mulai dari</p>
+                <button class="pp-tour-go" type="button" data-filter="Photography">Pesan Sekarang</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pp-section" id="isi-sesi" aria-labelledby="isi-title">
+        <div class="pp-head">
+          <h2 id="isi-title">Yang dikerjakan partner</h2>
+          <p>Batas tiap sesi, supaya kamu tahu apa yang termasuk sebelum memilih.</p>
+        </div>
+        <div class="pp-scope">
+          <article>
+            <h3>Pet Sitting</h3>
+            <p>Di rumahmu. Makan, air, bersihkan area, dan foto. Obat hanya jika jadwalnya tertulis.</p>
+          </article>
+          <article>
+            <h3>Dog Walking</h3>
+            <p>Khusus anjing, 30–45 menit. Rute disepakati. Kamu dapat catatan energi dan satu foto.</p>
+          </article>
+          <article>
+            <h3>Daycare</h3>
+            <p>Penitipan jam kerja. Ada main, istirahat, makan, dan kabar sebelum anabul dijemput.</p>
+          </article>
+          <article>
+            <h3>Training</h3>
+            <p>Satu sesi dasar di rumah atau taman: duduk, diam, jalan tanpa menarik. Ada catatan lanjutan.</p>
+          </article>
+          <article>
+            <h3>Pet Taxi</h3>
+            <p>Antar atau jemput sekali jalan ke klinik, grooming, atau keluarga. Kandang dan kabar saat tiba.</p>
+          </article>
+          <article>
+            <h3>Photography</h3>
+            <p>Sekitar 45 menit, mengikuti tempo anabul. Pilihan foto dikirim di hari yang sama.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pp-section" id="keunggulan" aria-labelledby="unggul-title">
+        <div class="pp-head">
+          <h2 id="unggul-title">Keunggulan Paws Partner</h2>
+          <p>Dari rencana sampai bayar, tetap di SobatPaws.</p>
+        </div>
+        <div class="pp-perks">
+          <article class="pp-perk">
+            <div class="pp-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3l7 3v6c0 5-3 7.4-7 9-4-1.6-7-4-7-9V6l7-3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Mitra terverifikasi</h3>
+            <p>Profil yang tampil sudah ditinjau. Lencana biru menandai status itu, lengkap ulasan bila sudah ada.</p>
+          </article>
+          <article class="pp-perk">
+            <div class="pp-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></div>
+            <h3>Yang terdekat dulu</h3>
+            <p>Rekomendasi diurutkan dari jarak ke Jakarta Selatan, Jakarta Pusat, Tangerang, Depok, atau Bekasi.</p>
+          </article>
+          <article class="pp-perk">
+            <div class="pp-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8 3v4M16 3v4M8 14h4"/></svg></div>
+            <h3>Tanggal yang kosong</h3>
+            <p>Partner yang libur di hari pilihanmu tidak didahulukan. Jika semua libur, tanggal buka berikutnya yang disebut.</p>
+          </article>
+          <article class="pp-perk">
+            <div class="pp-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 3.5v17M16.2 7.6c0-1.7-1.9-2.8-4.2-2.8S7.8 5.9 7.8 7.8 9.6 10.4 12 11s4.2 1.2 4.2 3.4-1.9 3.5-4.2 3.5-4.2-1.3-4.2-3"/></svg></div>
+            <h3>Kisaran harga terlihat</h3>
+            <p>Kartu menampilkan tarif mulai. Setelah rencana diisi, kisaran partner yang cocok ikut tampil.</p>
+          </article>
+          <article class="pp-perk">
+            <div class="pp-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M5 6h14v10H8l-3 3V6z"/></svg></div>
+            <h3>Pesanmu ikut terbawa</h3>
+            <p>Jam datang, obat, sifat pemalu, atau permintaan foto ikut ke pilihan partner dan halaman bayar.</p>
+          </article>
+          <article class="pp-perk">
+            <div class="pp-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+            <h3>Lanjut bayar di tempat yang sama</h3>
+            <p>Kalau rekomendasinya cocok, kamu pilih partner lalu mengisi pembayaran. Pratinjau ini tidak menarik dana.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pp-section" id="cara-kerja" aria-labelledby="cara-title">
+        <div class="clinic-intro">
+          <p class="clinic-kicker">Cara kerja</p>
+          <h2 id="cara-title">Empat langkah menuju <em>layanan.</em></h2>
+          <p>Isi rencana, terima rekomendasi terdekat, bandingkan tarif, lalu lanjut bayar.</p>
+        </div>
+        <ol class="path">
+          <li>
+            <a class="path-card" href="#rencana">
+              <div class="path-top is-photo">
+                <img src="assets/img/partner/isi-rencana.jpg" alt="" width="1024" height="572" />
+                <span>01</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M5 7h14M5 12h14M5 17h8"/></svg>
+              </div>
+              <div class="path-body">
+                <h3>Isi rencana</h3>
+                <p>Lokasi, tanggal, jenis hewan, dan pesan untuk partner.</p>
+                <span class="path-go">Isi rencana</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="path-card" href="#mitra">
+              <div class="path-top is-photo">
+                <img src="assets/img/partner/terima-rekomendasi.jpg" alt="" width="1024" height="572" />
+                <span>02</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M16 16l4 4"/></svg>
+              </div>
+              <div class="path-body">
+                <h3>Terima rekomendasi</h3>
+                <p>Hingga tiga partner terdekat yang kosong di tanggal itu.</p>
+                <span class="path-go">Lihat partner</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="path-card" href="#mitra">
+              <div class="path-top is-photo">
+                <img src="assets/img/partner/bandingkan-tarif.jpg" alt="" width="1024" height="572" />
+                <span>03</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path stroke="currentColor" stroke-width="1.6" d="M3 10h18"/></svg>
+              </div>
+              <div class="path-body">
+                <h3>Bandingkan tarif</h3>
+                <p>Jarak dan harga mulai tampil sebelum kamu memilih.</p>
+                <span class="path-go">Lihat tarif</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="path-card is-final" href="#rencana">
+              <div class="path-top is-photo">
+                <img src="assets/img/partner/pilih-bayar.jpg" alt="" width="1024" height="572" />
+                <span>04</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M5 12l5 5 9-10"/></svg>
+              </div>
+              <div class="path-body">
+                <h3>Pilih dan bayar</h3>
+                <p>Pesanmu ikut ke halaman bayar bersama partner dan tarif.</p>
+                <span class="path-go">Mulai sekarang</span>
+              </div>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <section class="pp-section" id="rencana" aria-labelledby="rencana-title">
+        <div class="pp-plan">
+          <div>
+            <h2 id="rencana-title">Rencanakan Layanan</h2>
+            <p class="pp-sub">Tulis di mana sesi berlangsung, kapan, untuk anjing atau kucing, dan apa yang perlu dikerjakan. Layanan boleh dikosongkan kalau belum yakin. SobatPaws mengurutkan partner terdekat yang jadwalnya kosong, lalu menampilkan kisaran tarif.</p>
+            <form class="pp-plan-form" id="plan-form">
+              <div class="pp-plan-grid">
+                <label class="pp-field">
+                  <span>Lokasi</span>
+                  <select name="lokasi" id="plan-area" required>
+                    <option value="">Pilih lokasi</option>
+                    <option>Jakarta Selatan</option>
+                    <option>Jakarta Pusat</option>
+                    <option>Tangerang</option>
+                    <option>Depok</option>
+                    <option>Bekasi</option>
+                  </select>
+                </label>
+                <label class="pp-field">
+                  <span>Tanggal</span>
+                  <input name="tanggal" id="plan-date" type="date" required />
+                </label>
+                <label class="pp-field">
+                  <span>Jenis hewan</span>
+                  <select name="hewan" id="plan-pet" required>
+                    <option value="">Pilih hewan</option>
+                    <option value="anjing">Anjing</option>
+                    <option value="kucing">Kucing</option>
+                  </select>
+                </label>
+                <label class="pp-field">
+                  <span>Jenis layanan</span>
+                  <select name="kategori" id="plan-service">
+                    <option value="">Belum yakin, bantu rekomendasikan</option>
+                    <option>Pet Sitting</option>
+                    <option>Dog Walking</option>
+                    <option>Daycare</option>
+                    <option>Training</option>
+                    <option>Pet Taxi</option>
+                    <option>Photography</option>
+                  </select>
+                </label>
+              </div>
+              <label class="pp-field">
+                <span>Pesan dan keinginan</span>
+                <textarea name="cerita" id="plan-story" placeholder="Contoh: jaga di rumah jam 08.00–17.00, kucing pemalu, makan dua kali, kirim foto siang, obat jam 12"></textarea>
+              </label>
+              <div class="pp-notes" role="group" aria-label="Contoh pesan yang bisa dimasukkan">
+                <button type="button" data-note="Datang sekitar jam 08.00.">Jam kedatangan</button>
+                <button type="button" data-note="Butuh jaga seharian sampai sore.">Seharian</button>
+                <button type="button" data-note="Layanan dilakukan di rumah saya.">Di rumah saya</button>
+                <button type="button" data-note="Mohon kirim kabar dan foto selama sesi.">Kabar foto</button>
+                <button type="button" data-note="Anabul pemalu, jangan dipaksa diangkat.">Anabul pemalu</button>
+                <button type="button" data-note="Ada jadwal obat yang perlu diberikan.">Perlu obat</button>
+                <button type="button" data-note="Antar ke klinik grooming.">Ke klinik</button>
+                <button type="button" data-note="Ajak jalan sore sekitar 30 menit.">Jalan sore</button>
+              </div>
+              <button class="pp-btn pp-btn-fill" type="submit">Lihat rekomendasi</button>
+            </form>
+          </div>
+          <aside class="pp-result" id="plan-result" aria-live="polite">
+            <p class="pp-kicker">Rekomendasi partner</p>
+            <p id="plan-lead">Isi lokasi, tanggal, dan jenis hewan. Partner diurutkan dari yang terdekat dan kosong di tanggal itu. Kisaran harga mengikuti yang cocok.</p>
+            <div id="plan-picks"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="pp-cta" aria-labelledby="cta-title">
+        <div>
+          <h2 id="cta-title">Punya keahlian merawat hewan? Yuk, jadi Paws Partner!</h2>
+          <p>Siapkan kota layanan, layanan utama, dan pengalaman merawat anjing atau kucing. Tim meninjau profil sebelum akun mitra aktif. Formulir ini pratinjau dan tidak mengirim data.</p>
+          <button class="pp-btn pp-btn-fill" type="button" id="open-join">Gabung Sebagai Partner</button>
+        </div>
+        <div class="pp-cta-pets" aria-hidden="true">
+          <img src="assets/img/cat.jpg" alt="" width="300" height="300" />
+          <img src="assets/img/dog-smile.jpg" alt="" width="300" height="300" />
+        </div>
+      </section>
+
+      <section class="pp-section" id="cerita" aria-labelledby="cerita-title">
+        <div class="pp-head">
+          <h2 id="cerita-title">Dari pet owner</h2>
+          <p>Contoh catatan setelah sesi. Nama berikut ilustrasi pratinjau, bukan ulasan yang masuk dari server.</p>
+        </div>
+        <div class="pp-quotes">
+          <figure class="pp-quote">
+            <blockquote>Naya datang jam 8, mengirim foto makan siang, dan litter sudah bersih saat saya pulang.</blockquote>
+            <figcaption><strong>Rina</strong><span>Pet Sitting · Jakarta Selatan · kucing</span></figcaption>
+          </figure>
+          <figure class="pp-quote">
+            <blockquote>Anjing saya dulu menarik tali. Setelah satu sesi dengan Dinda, jalan sore jadi lebih terkendali.</blockquote>
+            <figcaption><strong>Andi</strong><span>Training · Tangerang · anjing</span></figcaption>
+          </figure>
+          <figure class="pp-quote">
+            <blockquote>Dimas antar ke grooming dan kabar begitu sampai. Saya tidak perlu bolak-balik kantor.</blockquote>
+            <figcaption><strong>Maya</strong><span>Pet Taxi · Jakarta Selatan · anjing</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="pp-section" id="faq" aria-labelledby="faq-title">
+        <div class="pp-head">
+          <h2 id="faq-title">Pertanyaan Umum <em>Seputar Paws Partner</em></h2>
+          <p>Yang biasanya ditanyakan sebelum memilih partner atau mendaftar sebagai mitra.</p>
+        </div>
+        <div class="pp-faq">
+          <details open>
+            <summary>Apa itu Paws Partner?<span class="pp-plus" aria-hidden="true"></span></summary>
+            <p>Mitra SobatPaws untuk jaga di rumah, jalan-jalan anjing, penitipan harian, latihan dasar, antar jemput, dan sesi foto. Setiap profil menampilkan area, hewan yang diterima, dan tarif mulai.</p>
+          </details>
+          <details>
+            <summary>Apa yang bisa ditulis di pesan?<span class="pp-plus" aria-hidden="true"></span></summary>
+            <p>Jam kedatangan, durasi, lokasi sesi di rumah atau taman, permintaan foto, sifat anabul, jadwal obat, serta tujuan antar seperti klinik atau grooming. Tombol di bawah kolom pesan menambahkan kalimat itu.</p>
+          </details>
+          <details>
+            <summary>Bagaimana rekomendasinya dipilih?<span class="pp-plus" aria-hidden="true"></span></summary>
+            <p>Dari lokasi, tanggal, dan jenis hewan. Partner yang menerima hewan itu dan kosong di tanggal pilihan diurutkan dari yang terdekat, lalu dari tarif. Layanan boleh dikosongkan; kata di pesan seperti “jaga”, “jalan”, atau “antar” ikut mengarahkan jenis layanan.</p>
+          </details>
+          <details>
+            <summary>Wilayah mana yang tersedia?<span class="pp-plus" aria-hidden="true"></span></summary>
+            <p>Pratinjau ini mencakup Jakarta Selatan, Jakarta Pusat, Tangerang, Depok, dan Bekasi. Partner di luar area pilihan tetap bisa muncul, dengan jarak yang lebih jauh.</p>
+          </details>
+          <details>
+            <summary>Apakah pembayaran langsung menarik dana?<span class="pp-plus" aria-hidden="true"></span></summary>
+            <p>Belum. Halaman bayar adalah pratinjau. Memilih transfer, QRIS, dompet digital, atau kartu hanya mencatat pilihan di peramban ini dan tidak mengirim data ke server.</p>
+          </details>
+          <details>
+            <summary>Bagaimana jika tanggal yang dipilih partner libur?<span class="pp-plus" aria-hidden="true"></span></summary>
+            <p>Yang kosong di tanggal itu didahulukan. Jika tidak ada, daftar tetap menampilkan partner terdekat beserta tanggal buka berikutnya.</p>
+          </details>
+          <details>
+            <summary>Anjing dan kucing bisa dalam satu sesi?<span class="pp-plus" aria-hidden="true"></span></summary>
+            <p>Tergantung profil. Ada partner yang menerima keduanya, ada yang khusus kucing atau khusus anjing. Pilih jenis hewan di rencana supaya yang tidak menerima tidak ikut disarankan.</p>
+          </details>
+          <details>
+            <summary>Berapa biaya layanannya?<span class="pp-plus" aria-hidden="true"></span></summary>
+            <p>Angka di kartu adalah tarif mulai per sesi. Label “Mulai dari” pada layanan populer adalah rata-rata tarif partner untuk layanan itu. Kisaran di rekomendasi mengikuti partner yang cocok dengan rencanamu.</p>
+          </details>
+          <details>
+            <summary>Bagaimana jika jadwal berubah?<span class="pp-plus" aria-hidden="true"></span></summary>
+            <p>Ubah tanggal di rencana lalu minta rekomendasi lagi. Di pratinjau ini belum ada penguncian jadwal, jadi pilihan baru langsung mengganti yang sebelumnya.</p>
+          </details>
+          <details>
+            <summary>Bagaimana cara bergabung jadi partner?<span class="pp-plus" aria-hidden="true"></span></summary>
+            <p>Isi nama, kota, layanan utama, dan pengalaman merawat. Tim meninjau sebelum akun mitra aktif. Pengiriman formulir di halaman ini hanya pratinjau.</p>
+          </details>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer" aria-label="Footer SobatPaws">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="https://sobatpaws.com/" aria-label="SobatPaws">
+          <img src="assets/img/logo.png" alt="" width="180" height="64" />
+        </a>
+        <p>Aplikasi pet care untuk membantu pet owner menemukan, membandingkan, dan booking layanan terbaik untuk hewan kesayanganmu.</p>
+        <p>Mulai dari grooming, pet hotel, klinik hewan, konsultasi online, rekreasi, hingga pet transport. Semua bisa diakses langsung dari satu aplikasi.</p>
+        <p class="footer-company">PT. Ekosistem Satwa Indonesia</p>
+        <p class="footer-place">Sigma Coworking Space Jakarta Pusat</p>
+        <a href="https://www.google.com/maps/place/Sigma+Coworking+Space+Jakarta+Pusat/@-6.1753115,106.8098471,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f70015d8e73f:0xd3e7d1d621c72731!8m2!3d-6.1753115!4d106.812422!16s%2Fg%2F11y0c7725b" target="_blank" rel="noopener noreferrer">Jl. Tanah Abang II No. 74A, Petojo Selatan, Gambir, Jakarta Pusat 10160</a>
+        <a href="mailto:business@sobatpaws.net">Email: business@sobatpaws.net</a>
+        <div class="socials">
+          <a href="https://www.instagram.com/sobatpaws.id" aria-label="SobatPaws di Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.9c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.9-.1c-3.2-.1-4.8-1.7-4.9-4.9C2 15.6 2 15.2 2 12s0-3.6.1-4.8C2.2 3.9 3.8 2.4 7 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.7.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg></a>
+          <a href="https://www.threads.net/@sobatpaws.id" aria-label="SobatPaws di Threads" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></a>
+          <a href="https://www.tiktok.com/@sobatpaws.id" aria-label="SobatPaws di TikTok" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 3c.4 2.6 1.9 4.4 4.4 4.8v2.4c-1.5 0-2.9-.5-4.1-1.3v6.7a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v2.6a3.4 3.4 0 1 0 2.4 3.3V3H14z"/></svg></a>
+          <a href="https://www.facebook.com/share/18cKbE7qDN/" aria-label="SobatPaws di Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4V10c0-.6.4-1 1-1z"/></svg></a>
+          <a href="https://www.linkedin.com/company/sobat-paws/" aria-label="SobatPaws di LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4.7 3.3A1.8 1.8 0 1 1 4.7 7a1.8 1.8 0 0 1 0-3.7zM3.2 8.6h3v12.2h-3V8.6zm6.1 0h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8v7.4h-3v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5v6.7h-3V8.6z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3>Layanan</h3>
+        <a href="https://sobatpaws.com/pet-clinic">Klinik Hewan</a>
+        <a href="https://sobatpaws.com/pet-hotel">Pet Hotel &amp; Penitipan Hewan</a>
+        <a href="https://sobatpaws.com/pet-transport">Pet Transport (Antar Hewan)</a>
+        <a href="https://sobatpaws.com/grooming">Grooming Kucing &amp; Anjing</a>
+      </div>
+      <div>
+        <h3>Navigasi</h3>
+        <a href="https://sobatpaws.com/">Beranda</a>
+        <a href="https://sobatpaws.com/news">News</a>
+        <a href="https://sobatpaws.com/vets">Konsultasi</a>
+        <a href="https://sobatpaws.com/how-it-works">Cara Kerja</a>
+        <a href="https://sobatpaws.com/contact">Hubungi Kami</a>
+        <a href="https://sobatpaws.com/sobat">Tentang Kami</a>
+        <a href="https://sobatpaws.com/faq">Bantuan &amp; FAQ</a>
+        <a href="https://play.google.com/store/apps/details?id=com.sobatpaws.user" target="_blank" rel="noopener noreferrer">Download Aplikasi</a>
+      </div>
+      <div>
+        <h3>Untuk Pet Owner</h3>
+        <a href="https://sobatpaws.com/clinics">Klinik Hewan Terdekat</a>
+        <a href="https://sobatpaws.com/grooming">Salon Hewan Terdekat</a>
+        <a href="https://sobatpaws.com/pet-hotel">Booking Penitipan Hewan</a>
+        <a href="https://sobatpaws.com/vets">Dokter Hewan Online</a>
+        <a href="https://sobatpaws.com/pet-transport">Tracking Pet Transport</a>
+      </div>
+      <div>
+        <h3>Untuk Bisnis</h3>
+        <a href="http://bisnis.sobatpaws.com/" target="_blank" rel="noopener noreferrer">Bisnis (Sobat Paws)</a>
+        <a href="http://vets.sobatpaws.com/" target="_blank" rel="noopener noreferrer">Vets (Sobat Paws)</a>
+        <a href="http://app.sobatpaws.com/" target="_blank" rel="noopener noreferrer">Pet Clinic &amp; Shop</a>
+      </div>
+    </div>
+    <div class="container footer-mid">
+      <div class="footer-downloads">
+        <p>Unduh Aplikasi</p>
+        <div class="store-row">
+          <a class="store" href="https://apps.apple.com/id/app/sobat-paws/id6785621846?l=id" target="_blank" rel="noopener noreferrer" aria-label="Unduh SobatPaws di App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span><small>Unduh di</small>App Store</span>
+          </a>
+          <a class="store" href="https://play.google.com/store/apps/details?id=com.sobatpaws.user" target="_blank" rel="noopener noreferrer" aria-label="Unduh SobatPaws di Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.18 23.5c.3.17.64.26.99.26.4 0 .8-.11 1.15-.33l12.27-7.07-2.88-2.88L3.18 23.5z" fill="#EA4335"/><path d="M20.82 9.58L17.59 7.7 14.4 10.89l3.19 3.19 3.24-1.87c.92-.53.92-1.9-.01-2.43z" fill="#FBBC05"/><path d="M3.18.5C2.8.73 2.5 1.2 2.5 1.83v20.34c0 .63.3 1.1.68 1.33l.09.05 11.39-11.39v-.27L3.27.45 3.18.5z" fill="#4285F4"/><path d="M14.71 12.11l3.18-3.18-12.71-7.48L14.71 12.11z" fill="#34A853"/></svg>
+            <span><small>Unduh di</small>Google Play</span>
+          </a>
+        </div>
+        <p>Terdaftar di</p>
+        <a class="pse" href="https://pse.komdigi.go.id/pse/a0gwVjd5eEM1Y290NUFHSDMycVNFLzNzYXI1cFhVOHlsRWp5RXhiYUxnUGoqR0l3YmJUTnVvaDJ4bnNqazRIY2hJdz09KlRBb05rRFFwSWJleVNDTGthTU0ycWc9PSppOEFXSldZS1FNb2YveU9zZjFKbzZRPT0=" target="_blank" rel="noopener noreferrer" title="Nomor TDPSE : 028922.01/DJAI.PSE/08/2026" aria-label="Verifikasi Tanda Daftar PSE Komdigi SobatPaws">
+          <img src="assets/img/pse.png" alt="Terdaftar PSE Komdigi" width="160" height="48" />
+        </a>
+      </div>
+      <div class="footer-legal">
+        <a href="https://sobatpaws.com/terms-and-conditions">Syarat &amp; Ketentuan</a>
+        <a href="https://sobatpaws.com/privacy-policy">Kebijakan Privasi</a>
+      </div>
+    </div>
+    <div class="container footer-copy">
+      <p class="footer-cities">Tersedia di:
+        <a href="https://sobatpaws.com/kota/jakarta">Klinik Hewan Jakarta</a> ·
+        <a href="https://sobatpaws.com/kota/tangerang">Klinik Hewan Tangerang</a> ·
+        <a href="https://sobatpaws.com/kota/bekasi">Klinik Hewan Bekasi</a> ·
+        <a href="https://sobatpaws.com/kota/bogor">Klinik Hewan Bogor</a> ·
+        <a href="https://sobatpaws.com/kota/depok">Klinik Hewan Depok</a> ·
+        <a href="https://sobatpaws.com/kota/bandung">Klinik Hewan Bandung</a> ·
+        <a href="https://sobatpaws.com/kota/surabaya">Klinik Hewan Surabaya</a>
+      </p>
+      <small>© 2026 Sobat Paws. Hak cipta dilindungi undang-undang</small>
+    </div>
+  </footer>
+
+  <dialog id="store-dialog" aria-labelledby="store-title">
+    <div class="dialog-card">
+      <button class="icon-x" type="button" data-close aria-label="Tutup">×</button>
+      <h3 id="store-title">Download SobatPaws</h3>
+      <p class="dialog-lead">Pilih toko yang sesuai dengan perangkat Anda.</p>
+      <div class="store-choices">
+        <a class="store" href="https://apps.apple.com/id/app/sobat-paws/id6785621846?l=id" target="_blank" rel="noopener noreferrer">App Store</a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.sobatpaws.user" target="_blank" rel="noopener noreferrer">Google Play</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="pp-dialog" id="book-dialog" aria-labelledby="book-title">
+    <div class="pp-dialog-card">
+      <div class="pp-dialog-top">
+        <h3 id="book-title">Booking Sekarang</h3>
+        <button class="pp-x" type="button" data-close aria-label="Tutup">×</button>
+      </div>
+      <div class="pp-summary">
+        <img id="book-photo" alt="" width="144" height="144" />
+        <div>
+          <strong id="book-name"></strong>
+          <p class="pp-sub" id="book-meta"></p>
+        </div>
+      </div>
+      <form class="pp-form" id="book-form">
+        <label class="pp-field"><span>Nama kamu</span><input name="nama" required autocomplete="name" placeholder="Nama pet owner" /></label>
+        <label class="pp-field"><span>No. telepon</span><input name="telepon" type="tel" required autocomplete="tel" placeholder="08xxxxxxxxxx" /></label>
+        <label class="pp-field"><span>Tanggal</span><input name="tanggal" id="book-date" type="date" required /></label>
+        <label class="pp-field"><span>Catatan untuk partner</span><textarea name="catatan" placeholder="Jam kedatangan, kebiasaan makan, atau hal yang perlu dihindari"></textarea></label>
+        <p class="pp-success" id="book-success" hidden>Permintaan booking tercatat di pratinjau ini. Partner akan meninjau jadwalmu.</p>
+        <button class="pp-btn pp-btn-fill" type="submit">Konfirmasi Booking</button>
+        <p class="pp-fine">Pratinjau halaman ini tidak mengirim data ke server.</p>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="pp-dialog" id="profile-dialog" aria-labelledby="profile-title">
+    <div class="pp-dialog-card">
+      <div class="pp-dialog-top">
+        <h3 id="profile-title">Profil Partner</h3>
+        <button class="pp-x" type="button" data-close aria-label="Tutup">×</button>
+      </div>
+      <div class="pp-summary">
+        <img id="profile-photo" alt="" width="144" height="144" />
+        <div>
+          <strong id="profile-name"></strong>
+          <p class="pp-sub" id="profile-meta"></p>
+        </div>
+      </div>
+      <p id="profile-bio"></p>
+      <p class="pp-includes" id="profile-includes"></p>
+      <button class="pp-btn pp-btn-fill" type="button" id="profile-book" style="margin-top:16px;width:100%">Booking partner ini</button>
+    </div>
+  </dialog>
+
+  <dialog class="pp-dialog" id="join-dialog" aria-labelledby="join-title">
+    <div class="pp-dialog-card">
+      <div class="pp-dialog-top">
+        <h3 id="join-title">Gabung Sebagai Partner</h3>
+        <button class="pp-x" type="button" data-close aria-label="Tutup">×</button>
+      </div>
+      <p class="pp-sub">Ceritakan layanan yang ingin kamu tawarkan.</p>
+      <form class="pp-form" id="join-form">
+        <label class="pp-field"><span>Nama</span><input name="nama" required autocomplete="name" /></label>
+        <label class="pp-field"><span>Kota</span><input name="kota" required placeholder="Jakarta Selatan" /></label>
+        <label class="pp-field">
+          <span>Layanan utama</span>
+          <select name="layanan" required>
+            <option value="" disabled selected>Pilih layanan</option>
+            <option>Pet Sitting</option>
+            <option>Dog Walking</option>
+            <option>Daycare</option>
+            <option>Training</option>
+            <option>Pet Taxi</option>
+            <option>Photography</option>
+          </select>
+        </label>
+        <label class="pp-field"><span>No. telepon</span><input name="telepon" type="tel" required autocomplete="tel" /></label>
+        <p class="pp-success" id="join-success" hidden>Pendaftaran tercatat di pratinjau ini. Tim SobatPaws akan meninjau profilmu.</p>
+        <button class="pp-btn pp-btn-fill" type="submit">Kirim pendaftaran</button>
+        <p class="pp-fine">Pratinjau halaman ini tidak mengirim data ke server.</p>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/partner.js"></script>
+</body>
+</html>

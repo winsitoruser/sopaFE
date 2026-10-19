@@ -1735,6 +1735,16 @@ h1 span { display: block; }
 
 .footer-legal a:hover { color: var(--blue-deep); }
 
+.footer-cities {
+  margin: 0 0 16px;
+  color: #9ca3af;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.footer-cities a { color: #6b7280; }
+.footer-cities a:hover { color: var(--blue-deep); }
+
 .footer-copy {
   padding-bottom: 28px;
   color: #9ca3af;
