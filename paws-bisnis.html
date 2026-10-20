@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SoPaws | Platform Bisnis Pet Care</title>
+  <meta name="description" content="Kelola bisnis pet care dalam satu platform. Booking, POS, inventori, pelanggan, layanan klinik, grooming, dan pet hotel terintegrasi dengan ekosistem SobatPaws." />
+  <meta name="theme-color" content="#e7f4fb" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/bisnis.css?v=hero15" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse fill='%2314b8d4' cx='32' cy='42' rx='12' ry='10'/%3E%3Cellipse fill='%2314b8d4' cx='16' cy='26' rx='6' ry='8'/%3E%3Cellipse fill='%2314b8d4' cx='27' cy='15' rx='5.5' ry='7'/%3E%3Cellipse fill='%2314b8d4' cx='39' cy='15' rx='5.5' ry='7'/%3E%3Cellipse fill='%2314b8d4' cx='49' cy='26' rx='6' ry='8'/%3E%3C/svg%3E" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#konten">Loncat ke konten</a>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <svg viewBox="0 0 64 64"><ellipse cx="32" cy="44" rx="13" ry="11"/><ellipse cx="14" cy="26" rx="7" ry="9"/><ellipse cx="26" cy="14" rx="6" ry="8"/><ellipse cx="40" cy="14" rx="6" ry="8"/><ellipse cx="51" cy="26" rx="7" ry="9"/></svg>
+  </div>
+
+  <header class="header">
+    <div class="container header-bar">
+      <a class="logo" href="https://sobatpaws.com/" aria-label="SobatPaws beranda">
+        <img src="assets/img/logo.png" alt="" width="180" height="64" />
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigasi utama">
+        <a href="https://sobatpaws.com/#klinik-terdekat">Beranda</a>
+        <div class="menu">
+          <button class="menu-btn" type="button" aria-expanded="false" aria-haspopup="true">Layanan
+            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="menu-panel layanan-panel" role="menu" aria-label="Daftar layanan SobatPaws">
+            <div class="layanan-card">
+              <div>
+                <p class="layanan-kicker">Layanan</p>
+                <div class="layanan-grid">
+                  <a role="menuitem" href="https://sobatpaws.com/clinics">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 6v12M8 10h8M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span>
+                    <span><strong>Pet Clinic</strong><small>Kelola layanan medis dan jadwal.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/pet-transport">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 15h16M6 15l1.2-4h9.6L18 15M7 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg></span>
+                    <span><strong>Pet Transport</strong><small>Kelola layanan transportasi hewan.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/pet-hotel">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg></span>
+                    <span><strong>Pet Hotel</strong><small>Kelola operasional pet hotel lebih mudah.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/grooming">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8 6l10 10M10 4l2 2M14 18l-2 2M6 8l2-2"/></svg></span>
+                    <span><strong>Grooming</strong><small>Kelola layanan grooming lebih mudah.</small></span>
+                  </a>
+                  <a role="menuitem" href="https://sobatpaws.com/online-consultation">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H11l-4 3v-3H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg></span>
+                    <span><strong>Konsultasi Online</strong><small>Konsultasi cepat untuk kesehatan hewan kesayangan.</small></span>
+                  </a>
+                  <a role="menuitem" href="paws-partner.html">
+                    <span class="layanan-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="16.5" rx="3.2" ry="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="7.2" cy="11.2" rx="1.5" ry="2.1" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="10.4" cy="8.4" rx="1.4" ry="1.9" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="13.8" cy="8.4" rx="1.4" ry="1.9" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="16.9" cy="11.2" rx="1.5" ry="2.1" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                    <span><strong>Paws Partner</strong><small>Pet sitter, dog walker, dan mitra pet care.</small></span>
+                  </a>
+                </div>
+              </div>
+              <aside class="layanan-promo">
+                <p class="layanan-kicker">Mulai Sekarang</p>
+                <img src="assets/img/nav-promo.jpg" alt="Layanan perawatan hewan peliharaan SobatPaws" width="320" height="200" />
+                <strong>Perawatan Hewan Kesayangan Lebih Mudah</strong>
+                <p>Semua kebutuhan klinik, grooming, hotel, hingga transport dalam satu aplikasi.</p>
+                <button class="layanan-download" type="button" data-download>Download Sekarang</button>
+                <p class="layanan-help">Butuh bantuan memulai?<br />Kami siap membantu.</p>
+                <a class="btn-download is-small" href="https://wa.me/6285117767264" target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
+              </aside>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#beranda">Konsultasi</a>
+        <a href="https://sobatpaws.com/paws-point">Paws Point</a>
+        <a href="https://sobatpaws.com/news">News</a>
+        <a href="https://sobatpaws.com/how-it-works">Cara Kerja</a>
+        <a href="https://sobatpaws.com/sobat">Sobat</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn-masuk" href="https://sobatpaws.com/login">Masuk</a>
+        <button class="btn-download" type="button" data-download>Download Sekarang</button>
+        <div class="menu menu-lang">
+          <button class="lang-btn menu-btn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Ubah bahasa">
+            <span class="flag" aria-hidden="true"></span>
+          </button>
+          <div class="menu-panel lang-panel">
+            <span class="lang-current">Indonesia</span>
+          </div>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Buka menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <canvas id="bee"></canvas>
+
+  <main id="konten">
+    <section class="hero" id="top" data-theme="light">
+      <div class="hero__wash" aria-hidden="true">
+        <video src="assets/video/hero-bg.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <div class="hero__copy">
+        <p class="hero-kicker">All-in-One Pet Business Solution</p>
+        <h1>
+          <span class="line"><span>Kelola bisnis</span></span>
+          <span class="line"><span>pet care Anda,</span></span>
+          <span class="line"><span>satu platform.</span></span>
+        </h1>
+        <p class="hero__lead">Integrasi booking, POS, inventori, pelanggan, layanan klinik dan grooming, dan transaksi online dari ekosistem Sobat Paws untuk pet shop, pet clinic, dan pet hotel.</p>
+        <div class="hero__actions">
+          <button class="join" type="button" data-open-demo>
+            Jadwalkan Demo
+            <i><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 1l4 4-4 4"/></svg></i>
+          </button>
+          <button class="hero-video" type="button" data-open-video>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="currentColor" d="M10 8.5v7l6-3.5z"/></svg>
+            Lihat Video
+          </button>
+        </div>
+      </div>
+      <div class="hero__stage">
+        <svg class="hero__links" aria-hidden="true"></svg>
+        <span class="hero__geo hero__geo--ring" aria-hidden="true"></span>
+        <span class="hero__geo hero__geo--sq" aria-hidden="true"></span>
+        <span class="hero__geo hero__geo--tri" aria-hidden="true"></span>
+        <figure class="hero__portrait">
+          <span class="hero__pulse" aria-hidden="true"></span>
+          <img src="assets/img/bisnis/hero-circle.jpg" alt="Pemilik hewan tersenyum di depan laptop SobatPaws, dengan anjing pudel di meja" width="1024" height="1024" />
+          <span class="hero__pill">Satu platform</span>
+        </figure>
+        <figure class="hero__node hero__node--shop" data-node="shop">
+          <span class="hero__anchor" aria-hidden="true"></span>
+          <img src="assets/img/bisnis/hero-petshop.jpg" alt="Pet shop Sobat Paws" width="1024" height="768" />
+          <figcaption>Pet Shop</figcaption>
+        </figure>
+        <figure class="hero__node hero__node--clinic" data-node="clinic">
+          <span class="hero__anchor" aria-hidden="true"></span>
+          <img src="assets/img/bisnis/hero-petclinic.jpg" alt="Pet clinic Sobat Paws" width="1024" height="768" />
+          <figcaption>Pet Clinic</figcaption>
+        </figure>
+        <figure class="hero__node hero__node--hotel" data-node="hotel">
+          <span class="hero__anchor" aria-hidden="true"></span>
+          <img src="assets/img/bisnis/hero-pethotel.jpg" alt="Pet hotel Sobat Paws" width="1024" height="768" />
+          <figcaption>Pet Hotel</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="band" id="benefit" data-theme="light">
+      <div class="wrap">
+        <p class="kicker reveal">Benefit</p>
+        <h2 class="title reveal d1">Bisnis pet care yang lebih mudah dijalankan</h2>
+        <div class="benefit-grid">
+          <article class="benefit-card benefit-card--lead reveal d1">
+            <h2>Booking Lebih Banyak</h2>
+            <p>Terhubung dengan seluruh user Sobat Paws.</p>
+            <span class="benefit-art" aria-hidden="true">
+              <img src="assets/img/bisnis/benefit-booking.png" alt="" width="1024" height="924" />
+            </span>
+          </article>
+          <article class="benefit-card benefit-card--wide reveal d2">
+            <div>
+              <h2>Operasional Lebih Efisien</h2>
+              <p>Semua proses dalam satu platform.</p>
+            </div>
+            <span class="benefit-art" aria-hidden="true">
+              <img src="assets/img/bisnis/benefit-operasional.png" alt="" width="1008" height="1024" />
+            </span>
+          </article>
+          <article class="benefit-card benefit-card--line reveal d2">
+            <h2>Pelanggan Baru dari Ekosistem Sobat Paws</h2>
+            <p>Jangkau lebih banyak pecinta hewan di seluruh Indonesia.</p>
+            <span class="benefit-art" aria-hidden="true">
+              <img src="assets/img/bisnis/benefit-pelanggan.png" alt="" width="1024" height="948" />
+            </span>
+          </article>
+          <article class="benefit-card benefit-card--line reveal d3">
+            <h2>Data &amp; Laporan dalam Satu Dashboard</h2>
+            <p>Ambil keputusan bisnis lebih cepat dan akurat.</p>
+            <span class="benefit-art" aria-hidden="true">
+              <img src="assets/img/bisnis/benefit-laporan.png" alt="" width="1024" height="808" />
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet" id="fitur" data-theme="light">
+      <div class="wrap">
+        <p class="kicker reveal">Fitur Utama</p>
+        <h2 class="title reveal d1">Semua yang Anda Butuhkan untuk Mengelola Bisnis Pet Care</h2>
+        <p class="sub reveal d2">Fitur lengkap dan terintegrasi untuk memantau operasional bisnis Anda semakin mudah dan berkembang.</p>
+        <div class="feature-grid">
+          <article class="reveal">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="M8 3v4M16 3v4M4 10h16"/></svg></span>
+            <h3>Booking &amp; Appointment</h3>
+            <p>Kelola penjadwalan, klinik, pelatihan, penitipan hewan, dan lainnya. Kelola jadwal, staf, harga, dan kapasitas dengan mudah.</p>
+          </article>
+          <article class="reveal d1">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M6 7h12l-1 12H7L6 7zM9 7V5h6v2"/></svg></span>
+            <h3>POS &amp; Penjualan</h3>
+            <p>Transaksi cepat, fleksibel, termasuk online dan offline.</p>
+          </article>
+          <article class="reveal d1">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M4 8l8-4 8 4v10l-8 4-8-4V8zM12 4v16M4 8l8 4 8-4"/></svg></span>
+            <h3>Inventori &amp; Produk</h3>
+            <p>Kelola stok, kategori, hingga notifikasi stok menipis.</p>
+          </article>
+          <article class="reveal d2">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="M6 19c.8-3 2.8-4.5 6-4.5s5.2 1.5 6 4.5"/></svg></span>
+            <h3>Pelanggan &amp; Member</h3>
+            <p>Data pelanggan terpusat, program member, dan loyalitas.</p>
+          </article>
+          <article class="reveal d2">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M8 6l10 10M14 6h4v4M6 14l4 4"/></svg></span>
+            <h3>Layanan Klinik &amp; Grooming</h3>
+            <p>Kelola layanan, treatment, rekam medis, dan jadwal staf.</p>
+          </article>
+          <article class="reveal d3">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M4 19h16M6 16l3-5 3 3 3-6 3 4"/></svg></span>
+            <h3>Laporan &amp; Analitik</h3>
+            <p>Pantau performa bisnis dengan laporan lengkap dan real-time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet" id="cara-kerja" data-theme="light">
+      <div class="wrap">
+        <p class="kicker reveal">Cara Kerja</p>
+        <h2 class="title reveal d1">Terhubung dengan Ekosistem Sobat Paws</h2>
+        <p class="sub reveal d2">Dari pelanggan menemukan layanan hingga transaksi selesai, semua terhubung dalam satu ekosistem.</p>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="M11 18h2"/></svg></span>
+            <h3>User Sobat Paws App</h3>
+            <p>Jutaan pecinta hewan mencari perawatan di aplikasi Sobat Paws.</p>
+          </li>
+          <li class="arrow" aria-hidden="true">→</li>
+          <li class="reveal d1">
+            <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M6 7h12l-1 12H7L6 7zM9 7V5h6v2"/></svg></span>
+            <h3>Booking / Belanja Online</h3>
+            <p>Pelanggan melakukan booking layanan atau belanja produk.</p>
+          </li>
+          <li class="arrow" aria-hidden="true">→</li>
+          <li class="reveal d2">
+            <span class="step-ico paw" aria-hidden="true"><svg viewBox="0 0 64 64"><ellipse cx="32" cy="44" rx="11" ry="9"/><ellipse cx="16" cy="28" rx="6" ry="8"/><ellipse cx="26" cy="16" rx="5" ry="7"/><ellipse cx="39" cy="16" rx="5" ry="7"/><ellipse cx="49" cy="28" rx="6" ry="8"/></svg></span>
+            <h3>SoPaws Business Platform</h3>
+            <p>Kelola semua operasional dari satu dashboard terintegrasi.</p>
+          </li>
+          <li class="arrow" aria-hidden="true">→</li>
+          <li class="reveal d3">
+            <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg></span>
+            <h3>Pet Shop / Pet Clinic / Pet Hotel</h3>
+            <p>Layanan lebih maksimal, pelanggan lebih puas, bisnis makin berkembang.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="s1" id="layanan" data-theme="light">
+      <div class="num reveal">01</div>
+      <div class="text">
+        <p class="kicker reveal">Manajemen Layanan</p>
+        <h2 class="title reveal d1">Kelola Semua Layanan dalam Satu Dashboard</h2>
+        <p class="reveal d2">Atur layanan grooming, klinik, pelatihan, penitipan hewan, dan lainnya. Kelola jadwal, staf, harga, dan kapasitas dengan mudah.</p>
+        <ul class="checks reveal d3">
+          <li>Lihat jadwal dan treatment hari ini</li>
+          <li>Kelola kategori layanan dan harga</li>
+          <li>Atur kapasitas dan staf</li>
+          <li>Pantau pendapatan per layanan</li>
+        </ul>
+        <a class="text-link reveal d3" href="#fitur">Lihat Detail Fitur →</a>
+      </div>
+      <div class="monitor" data-speed="0.35" data-rot="-6" data-monitor>
+        <div class="monitor-bezel">
+          <div class="monitor-screen" aria-roledescription="carousel" aria-label="Cuplikan dashboard layanan">
+            <img class="is-on" src="assets/img/bisnis/layanan.png" alt="Dashboard layanan: 2 layanan aktif, pendapatan Rp 2.000, dan katalog grooming sampai penitipan hewan" width="1024" height="591" />
+            <img src="assets/img/bisnis/showcase.jpg" alt="Monitor menampilkan dashboard layanan SoPaws, dengan anjing dan kucing di meja kerja" width="1024" height="576" />
+          </div>
+        </div>
+        <div class="monitor-dots">
+          <button type="button" class="is-on" aria-label="Dashboard layanan" aria-current="true"></button>
+          <button type="button" aria-label="Tampilan monitor layanan"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="s2" data-theme="dark">
+      <div class="text">
+        <div class="num reveal">02</div>
+        <p class="kicker reveal d1">POS &amp; Penjualan</p>
+        <h2 class="title reveal d1">Transaksi Lebih Cepat dan Profesional</h2>
+        <p class="copy reveal d2">Sistem POS modern untuk persediaan produk, layanan, dan transaksi online. Dilengkapi dengan manajemen kasir, hold order, dan berbagai metode pembayaran.</p>
+        <ul class="checks reveal d3">
+          <li>Transaksi cepat dan mudah</li>
+          <li>Kelola keranjang dan hold order</li>
+          <li>Dukungan pembayaran online dan offline</li>
+          <li>Terintegrasi dengan inventori</li>
+        </ul>
+        <a class="text-link reveal d3" href="#fitur">Lihat Detail POS →</a>
+      </div>
+      <div class="monitor is-laptop" data-speed="-0.3" data-rot="10" data-monitor>
+        <div class="monitor-bezel">
+          <div class="monitor-screen" aria-roledescription="carousel" aria-label="Cuplikan POS SoPaws">
+            <img class="is-on" src="assets/img/bisnis/pos-ringkasan.png" alt="Ringkasan register POS: penjualan hari ini Rp 1.000, penjualan bulan ini Rp 133.000, dan shift kasir aktif" width="1024" height="591" />
+            <img src="assets/img/bisnis/pos-keranjang.png" alt="Keranjang transaksi POS dengan katalog produk Whisko dan Pawrolls, total pembayaran Rp 9.000" width="1024" height="591" />
+            <img src="assets/img/bisnis/pos-kasir.jpg" alt="Halaman POS dan kasir: ringkasan register, shift aktif, dan transaksi terbaru" width="1024" height="744" />
+            <img src="assets/img/bisnis/pos-transaksi.jpg" alt="POS transaksi baru: katalog produk dan keranjang dengan total pembayaran" width="1024" height="715" />
+          </div>
+        </div>
+        <div class="laptop-deck" aria-hidden="true"></div>
+        <div class="monitor-dots">
+          <button type="button" class="is-on" aria-label="Ringkasan kasir" aria-current="true"></button>
+          <button type="button" aria-label="Keranjang transaksi"></button>
+          <button type="button" aria-label="POS dan kasir"></button>
+          <button type="button" aria-label="Transaksi baru"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="s3" id="solusi" data-theme="light">
+      <div class="text">
+        <div class="num reveal">03</div>
+        <p class="kicker reveal d1">Solusi Bisnis</p>
+        <h2 class="title reveal d1">Dirancang untuk Berbagai Jenis Bisnis Pet Care</h2>
+      </div>
+      <div class="wrap">
+        <div class="solution-grid">
+          <article class="reveal d1">
+            <img src="assets/img/bisnis/solusi-petshop.jpg" alt="Pelanggan dan staf Sobat Paws di pet shop, dengan anjing golden retriever dan kucing" width="1024" height="768" data-speed="-0.08" data-rot="4" />
+            <div>
+              <h3>Untuk Pet Shop</h3>
+              <p>Kelola penjualan produk, inventori, pelanggan, dan pesanan online dengan mudah.</p>
+              <a href="#fitur">Pelajari Solusi →</a>
+            </div>
+          </article>
+          <article class="reveal d2">
+            <img src="assets/img/bisnis/solusi-petclinic.jpg" alt="Dokter hewan Sobat Paws bersama pemilik, anjing corgi, dan kucing di klinik" width="942" height="556" data-speed="-0.12" data-rot="-4" />
+            <div>
+              <h3>Untuk Pet Clinic</h3>
+              <p>Kelola jadwal dokter, rekam medis, treatment, dan operasional sistem klinik.</p>
+              <a href="#fitur">Pelajari Solusi →</a>
+            </div>
+          </article>
+          <article class="reveal d3">
+            <img src="assets/img/bisnis/solusi-pethotel.jpg" alt="Tamu check-in di Sobat Paws Pet Hotel bersama anjing golden retriever dan kucing" width="1024" height="768" data-speed="-0.16" data-rot="6" />
+            <div>
+              <h3>Untuk Pet Hotel</h3>
+              <p>Atur reservasi, kapasitas kamar, layanan tambahan, dan laporan harian dengan mudah.</p>
+              <a href="#fitur">Pelajari Solusi →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet impact" data-theme="light">
+      <div class="wrap impact__head">
+        <div>
+          <p class="kicker reveal">Dampak Nyata</p>
+          <h2 class="title reveal d1">Bersama SoPaws, Bisnis Anda Makin Bertumbuh</h2>
+        </div>
+      </div>
+      <div class="impact-carousel" data-impact>
+        <div class="impact-track">
+          <article class="impact-card">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="M8 3v4M16 3v4M4 10h16"/></svg></span>
+            <strong class="impact-card__num" data-count="70" data-prefix="+" data-suffix="%">+70%</strong>
+            <h3>Okupansi Layanan</h3>
+            <p>Rata-rata kenaikan booking dalam 3 bulan.</p>
+            <figure>
+              <img src="assets/img/bisnis/layanan.png" alt="Dashboard layanan SoPaws dengan jadwal dan kapasitas" width="1024" height="640" />
+              <a class="impact-card__go" href="#fitur" aria-label="Lihat fitur okupansi layanan"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </figure>
+          </article>
+          <article class="impact-card">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M13 3L5 14h7l-1 7 8-11h-7l1-7z"/></svg></span>
+            <strong class="impact-card__num" data-count="50" data-suffix="%">50%</strong>
+            <h3>Efisiensi Operasional</h3>
+            <p>Proses lebih cepat dan minim kesalahan.</p>
+            <figure>
+              <img src="assets/img/bisnis/pos-kasir.jpg" alt="Layar kasir SoPaws saat transaksi" width="1024" height="640" />
+              <a class="impact-card__go" href="#fitur" aria-label="Lihat fitur efisiensi operasional"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </figure>
+          </article>
+          <article class="impact-card">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M4 8l8-4 8 4v8l-8 4-8-4V8z"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="M12 12v8M12 12L4 8M12 12l8-4"/></svg></span>
+            <strong class="impact-card__num" data-count="90" data-suffix="%">90%</strong>
+            <h3>Kontrol Stok</h3>
+            <p>Stok lebih akurat dan terpantau real-time.</p>
+            <figure>
+              <img src="assets/img/bisnis/pos-keranjang.png" alt="Keranjang produk di kasir SoPaws" width="1024" height="640" />
+              <a class="impact-card__go" href="#fitur" aria-label="Lihat fitur kontrol stok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </figure>
+          </article>
+          <article class="impact-card">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M3.5 19c.6-3 2.8-4.5 5.5-4.5s4.9 1.5 5.5 4.5M14 14.6c1.6-.4 3.2.1 4.2 1.4.7.9 1.1 2 1.3 3"/></svg></span>
+            <strong class="impact-card__num" data-count="3" data-suffix="x">3x</strong>
+            <h3>Kinerja Tim</h3>
+            <p>Tim lebih produktif dengan sistem terintegrasi.</p>
+            <figure>
+              <img src="assets/img/bisnis/hero-dashboard.jpg" alt="Dashboard SoPaws di monitor bersama anjing dan kucing" width="1024" height="576" />
+              <a class="impact-card__go" href="#fitur" aria-label="Lihat fitur kinerja tim"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="wrap impact__foot">
+        <p class="note">*Ilustrasi dampak setelah pemakaian. Hasil setiap petshop berbeda.</p>
+        <div class="impact-dots" data-impact-dots></div>
+      </div>
+    </section>
+
+    <section class="sheet grow" id="integrasi" data-theme="light">
+      <div class="wrap">
+        <div class="grow__head">
+          <div>
+            <p class="kicker reveal">Sudah Punya Sistem?</p>
+            <h2 class="title reveal d1">Sobat Paws Tetap Bisa Membantu Bisnis Anda Tumbuh</h2>
+          </div>
+          <p class="sub reveal d2">Tidak perlu memulai dari nol atau mengganti sistem yang sudah berjalan. Sobat Paws menghubungkan bisnis pet care Anda dengan ekosistem pelanggan yang lebih luas, peluang reservasi baru, serta solusi integrasi untuk membantu menyederhanakan operasional dalam satu dashboard.</p>
+        </div>
+        <ol class="grow-points">
+          <li class="reveal">
+            <span>01</span>
+            <div>
+              <h3>Lebih Banyak Peluang Pelanggan Baru</h3>
+              <p class="grow-lead">Jangkau pet owner di luar pelanggan Anda saat ini.</p>
+              <p>Hadirkan Pet Shop, Pet Hotel, atau Pet Clinic Anda dalam ekosistem Sobat Paws. Tingkatkan visibilitas layanan dan buka peluang booking dari pengguna yang sedang mencari layanan pet care.</p>
+            </div>
+          </li>
+          <li class="reveal d1">
+            <span>02</span>
+            <div>
+              <h3>Semua Booking Lebih Mudah Dikelola</h3>
+              <p class="grow-lead">Berbagai kanal reservasi, satu pusat pengelolaan.</p>
+              <p>Kelola booking dari aplikasi Sobat Paws, website bisnis Anda, reservasi langsung, hingga sistem pihak ketiga yang kompatibel. Pantau jadwal, ketersediaan layanan, dan permintaan reservasi melalui dashboard terpusat.</p>
+            </div>
+          </li>
+          <li class="reveal d2">
+            <span>03</span>
+            <div>
+              <h3>Tetap Gunakan Software yang Anda Percaya</h3>
+              <p class="grow-lead">Integrasi yang mengikuti kebutuhan bisnis Anda.</p>
+              <p>Sudah memakai POS, sistem manajemen klinik, atau software reservasi hotel hewan? Sobat Paws menawarkan pendekatan integrasi fleksibel tanpa harus mengganti seluruh sistem. Ketersediaan integrasi menyesuaikan kompatibilitas perangkat lunak yang digunakan.</p>
+            </div>
+          </li>
+          <li class="reveal d3">
+            <span>04</span>
+            <div>
+              <h3>Bukan Sekadar Manajemen, tetapi Pertumbuhan Bisnis</h3>
+              <p class="grow-lead">Dari operasional sehari-hari hingga peluang transaksi berikutnya.</p>
+              <p>Manfaatkan akses ke ekosistem layanan pet care, penawaran layanan tambahan, promosi, loyalitas pelanggan, serta insight bisnis untuk membantu meningkatkan pengalaman pelanggan dan potensi pendapatan.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="grow-stages">
+          <h3 class="title reveal">Satu Ekosistem untuk Setiap Tahap Pertumbuhan Bisnis</h3>
+          <div class="stage-grid">
+            <article class="reveal">
+              <p class="kicker">Baru Memulai Bisnis?</p>
+              <p>Gunakan solusi Sobat Paws untuk mengelola kasir, booking, transaksi, stok, dan aktivitas operasional dari satu platform.</p>
+            </article>
+            <article class="reveal d1 is-focus">
+              <p class="kicker">Sudah Memiliki Software?</p>
+              <p>Pertahankan sistem operasional Anda dan manfaatkan Sobat Paws sebagai kanal tambahan untuk menjangkau pelanggan serta mengelola booking yang masuk.</p>
+            </article>
+            <article class="reveal d2">
+              <p class="kicker">Mengelola Banyak Cabang?</p>
+              <p>Satukan visibilitas aktivitas bisnis dari berbagai lokasi melalui dashboard dan integrasi yang dirancang sesuai kebutuhan operasional.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet" id="faq" data-theme="light">
+      <div class="wrap faq-grid">
+        <div>
+          <p class="kicker reveal">Pertanyaan Umum</p>
+          <h2 class="title reveal d1">Pertanyaan yang Sering Diajukan</h2>
+          <div class="faq-list">
+            <details class="reveal" open>
+              <summary>Apakah SoPaws cocok untuk bisnis kecil?</summary>
+              <p>Cocok. SoPaws dipakai pet shop, klinik, grooming, dan pet hotel, dari outlet tunggal sampai beberapa cabang. Paket bisa disesuaikan dengan skala operasional Anda.</p>
+            </details>
+            <details class="reveal d1">
+              <summary>Apakah ada biaya di awal?</summary>
+              <p>Demo dan sesi penjelasan gratis. Biaya berlangganan mengikuti modul yang dipakai, misalnya petshop dan pet hotel, dan dibahas saat jadwal demo.</p>
+            </details>
+            <details class="reveal d2">
+              <summary>Apakah bisa diakses dari beberapa perangkat?</summary>
+              <p>Bisa. Dashboard SoPaws dibuka dari laptop, tablet, atau ponsel selama terhubung internet, supaya kasir, resepsionis, dan owner melihat data yang sama.</p>
+            </details>
+            <details class="reveal d3">
+              <summary>Apakah ada pelatihan untuk tim saya?</summary>
+              <p>Ada. Tim SoPaws mendampingi setup awal, impor data, dan pelatihan singkat untuk kasir, groomer, dan admin supaya operasional tidak terhenti.</p>
+            </details>
+            <details class="reveal d3">
+              <summary>Apakah harus mengganti sistem yang sudah berjalan?</summary>
+              <p>Tidak. Sistem yang sudah dipakai bisa tetap berjalan. Sobat Paws bisa menjadi kanal tambahan untuk menjangkau pelanggan dan mengelola booking, dengan integrasi yang menyesuaikan software yang Anda gunakan.</p>
+            </details>
+          </div>
+        </div>
+        <figure class="faq-photo reveal d1">
+          <img src="assets/img/partner/p5.jpg" alt="Anjing tersenyum di pantai" width="640" height="720" data-speed="-0.2" data-rot="-6" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="foot" id="contact" data-theme="light">
+      <div class="cta">
+        <img src="assets/img/partner/p3.jpg" alt="" width="92" height="92" style="width:92px;height:92px;object-fit:cover;border-radius:50%;margin:0 auto 16px;" />
+        <h2 class="title reveal">Bisnis Anda Sudah Berjalan. Saatnya Jangkauan Anda Semakin Luas.</h2>
+        <p class="reveal d1">Temukan bagaimana Sobat Paws dapat membantu menghubungkan layanan, sistem, dan pelanggan untuk mendukung pertumbuhan bisnis pet care Anda.</p>
+        <div class="cta-actions reveal d2">
+          <button class="join" type="button" data-open-demo>
+            <i><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 1l4 4-4 4"/></svg></i>
+            Jadwalkan Demo Sobat Paws
+          </button>
+          <button class="join join--line" type="button" data-open-demo data-demo="integrasi">
+            <i><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 1l4 4-4 4"/></svg></i>
+            Konsultasikan Integrasi Sistem
+          </button>
+        </div>
+        <ul class="perks reveal d3">
+          <li>Gratis tanpa biaya</li>
+          <li>Konsultasi dengan tim ahli</li>
+          <li>Tidak ada komitmen</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="Footer SobatPaws">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="https://sobatpaws.com/" aria-label="SobatPaws">
+          <img src="assets/img/logo.png" alt="" width="180" height="64" />
+        </a>
+        <p>Aplikasi pet care untuk membantu pet owner menemukan, membandingkan, dan booking layanan terbaik untuk hewan kesayanganmu.</p>
+        <p>Mulai dari grooming, pet hotel, klinik hewan, konsultasi online, rekreasi, hingga pet transport. Semua bisa diakses langsung dari satu aplikasi.</p>
+        <p class="footer-company">PT. Ekosistem Satwa Indonesia</p>
+        <p class="footer-place">Sigma Coworking Space Jakarta Pusat</p>
+        <a href="https://www.google.com/maps/place/Sigma+Coworking+Space+Jakarta+Pusat/@-6.1753115,106.8098471,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f70015d8e73f:0xd3e7d1d621c72731!8m2!3d-6.1753115!4d106.812422!16s%2Fg%2F11y0c7725b" target="_blank" rel="noopener noreferrer">Jl. Tanah Abang II No. 74A, Petojo Selatan, Gambir, Jakarta Pusat 10160</a>
+        <a href="mailto:business@sobatpaws.net">Email: business@sobatpaws.net</a>
+        <div class="socials">
+          <a href="https://www.instagram.com/sobatpaws.id" aria-label="SobatPaws di Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.9c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.9-.1c-3.2-.1-4.8-1.7-4.9-4.9C2 15.6 2 15.2 2 12s0-3.6.1-4.8C2.2 3.9 3.8 2.4 7 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.7.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg></a>
+          <a href="https://www.threads.net/@sobatpaws.id" aria-label="SobatPaws di Threads" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg></a>
+          <a href="https://www.tiktok.com/@sobatpaws.id" aria-label="SobatPaws di TikTok" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 3c.4 2.6 1.9 4.4 4.4 4.8v2.4c-1.5 0-2.9-.5-4.1-1.3v6.7a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v2.6a3.4 3.4 0 1 0 2.4 3.3V3H14z"/></svg></a>
+          <a href="https://www.facebook.com/share/18cKbE7qDN/" aria-label="SobatPaws di Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4V10c0-.6.4-1 1-1z"/></svg></a>
+          <a href="https://www.linkedin.com/company/sobat-paws/" aria-label="SobatPaws di LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4.7 3.3A1.8 1.8 0 1 1 4.7 7a1.8 1.8 0 0 1 0-3.7zM3.2 8.6h3v12.2h-3V8.6zm6.1 0h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8v7.4h-3v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5v6.7h-3V8.6z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3>Layanan</h3>
+        <a href="https://sobatpaws.com/pet-clinic">Klinik Hewan</a>
+        <a href="https://sobatpaws.com/pet-hotel">Pet Hotel &amp; Penitipan Hewan</a>
+        <a href="https://sobatpaws.com/pet-transport">Pet Transport (Antar Hewan)</a>
+        <a href="https://sobatpaws.com/grooming">Grooming Kucing &amp; Anjing</a>
+      </div>
+      <div>
+        <h3>Navigasi</h3>
+        <a href="https://sobatpaws.com/">Beranda</a>
+        <a href="https://sobatpaws.com/news">News</a>
+        <a href="https://sobatpaws.com/vets">Konsultasi</a>
+        <a href="https://sobatpaws.com/how-it-works">Cara Kerja</a>
+        <a href="https://sobatpaws.com/contact">Hubungi Kami</a>
+        <a href="https://sobatpaws.com/sobat">Tentang Kami</a>
+        <a href="https://sobatpaws.com/faq">Bantuan &amp; FAQ</a>
+        <a href="https://play.google.com/store/apps/details?id=com.sobatpaws.user" target="_blank" rel="noopener noreferrer">Download Aplikasi</a>
+      </div>
+      <div>
+        <h3>Untuk Pet Owner</h3>
+        <a href="https://sobatpaws.com/clinics">Klinik Hewan Terdekat</a>
+        <a href="https://sobatpaws.com/grooming">Salon Hewan Terdekat</a>
+        <a href="https://sobatpaws.com/pet-hotel">Booking Penitipan Hewan</a>
+        <a href="https://sobatpaws.com/vets">Dokter Hewan Online</a>
+        <a href="https://sobatpaws.com/pet-transport">Tracking Pet Transport</a>
+      </div>
+      <div>
+        <h3>Untuk Bisnis</h3>
+        <a href="http://bisnis.sobatpaws.com/" target="_blank" rel="noopener noreferrer">Bisnis (Sobat Paws)</a>
+        <a href="http://vets.sobatpaws.com/" target="_blank" rel="noopener noreferrer">Vets (Sobat Paws)</a>
+        <a href="http://app.sobatpaws.com/" target="_blank" rel="noopener noreferrer">Pet Clinic &amp; Shop</a>
+      </div>
+    </div>
+    <div class="container footer-mid">
+      <div class="footer-downloads">
+        <p>Unduh Aplikasi</p>
+        <div class="store-row">
+          <a class="store" href="https://apps.apple.com/id/app/sobat-paws/id6785621846?l=id" target="_blank" rel="noopener noreferrer" aria-label="Unduh SobatPaws di App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span><small>Unduh di</small>App Store</span>
+          </a>
+          <a class="store" href="https://play.google.com/store/apps/details?id=com.sobatpaws.user" target="_blank" rel="noopener noreferrer" aria-label="Unduh SobatPaws di Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.18 23.5c.3.17.64.26.99.26.4 0 .8-.11 1.15-.33l12.27-7.07-2.88-2.88L3.18 23.5z" fill="#EA4335"/><path d="M20.82 9.58L17.59 7.7 14.4 10.89l3.19 3.19 3.24-1.87c.92-.53.92-1.9-.01-2.43z" fill="#FBBC05"/><path d="M3.18.5C2.8.73 2.5 1.2 2.5 1.83v20.34c0 .63.3 1.1.68 1.33l.09.05 11.39-11.39v-.27L3.27.45 3.18.5z" fill="#4285F4"/><path d="M14.71 12.11l3.18-3.18-12.71-7.48L14.71 12.11z" fill="#34A853"/></svg>
+            <span><small>Unduh di</small>Google Play</span>
+          </a>
+        </div>
+        <p>Terdaftar di</p>
+        <a class="pse" href="https://pse.komdigi.go.id/pse/a0gwVjd5eEM1Y290NUFHSDMycVNFLzNzYXI1cFhVOHlsRWp5RXhiYUxnUGoqR0l3YmJUTnVvaDJ4bnNqazRIY2hJdz09KlRBb05rRFFwSWJleVNDTGthTU0ycWc9PSppOEFXSldZS1FNb2YveU9zZjFKbzZRPT0=" target="_blank" rel="noopener noreferrer" title="Nomor TDPSE : 028922.01/DJAI.PSE/08/2026" aria-label="Verifikasi Tanda Daftar PSE Komdigi SobatPaws">
+          <img src="assets/img/pse.png" alt="Terdaftar PSE Komdigi" width="160" height="48" />
+        </a>
+      </div>
+      <div class="footer-legal">
+        <a href="https://sobatpaws.com/terms-and-conditions">Syarat &amp; Ketentuan</a>
+        <a href="https://sobatpaws.com/privacy-policy">Kebijakan Privasi</a>
+      </div>
+    </div>
+    <div class="container footer-copy">
+      <p class="footer-cities">Tersedia di:
+        <a href="https://sobatpaws.com/kota/jakarta">Klinik Hewan Jakarta</a> ·
+        <a href="https://sobatpaws.com/kota/tangerang">Klinik Hewan Tangerang</a> ·
+        <a href="https://sobatpaws.com/kota/bekasi">Klinik Hewan Bekasi</a> ·
+        <a href="https://sobatpaws.com/kota/bogor">Klinik Hewan Bogor</a> ·
+        <a href="https://sobatpaws.com/kota/depok">Klinik Hewan Depok</a> ·
+        <a href="https://sobatpaws.com/kota/bandung">Klinik Hewan Bandung</a> ·
+        <a href="https://sobatpaws.com/kota/surabaya">Klinik Hewan Surabaya</a>
+      </p>
+      <small>© 2026 Sobat Paws. Hak cipta dilindungi undang-undang</small>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="demo-modal">
+    <form method="dialog" id="demo-form">
+      <header>
+        <h2>Jadwalkan Demo</h2>
+        <button type="button" class="close" data-close aria-label="Tutup">×</button>
+      </header>
+      <p>Ceritakan bisnis Anda. Tim SoPaws akan menghubungi untuk sesi demo gratis.</p>
+      <label>Nama<input name="nama" required autocomplete="name" placeholder="Nama Anda" /></label>
+      <label>Nama bisnis<input name="bisnis" required placeholder="Nama pet shop / klinik / hotel" /></label>
+      <label>WhatsApp<input name="wa" required inputmode="tel" autocomplete="tel" placeholder="08xxxxxxxxxx" /></label>
+      <label>Jenis bisnis
+        <select name="jenis" required>
+          <option value="">Pilih jenis bisnis</option>
+          <option>Pet Shop</option>
+          <option>Pet Clinic</option>
+          <option>Pet Hotel</option>
+          <option>Grooming</option>
+          <option>Gabungan</option>
+        </select>
+      </label>
+      <button class="btn" type="submit">Kirim Permintaan</button>
+      <p class="form-ok" hidden>Permintaan demo tercatat. Tim SoPaws akan menghubungi Anda.</p>
+    </form>
+  </dialog>
+
+  <dialog class="modal video-modal" id="video-modal">
+    <form method="dialog">
+      <header>
+        <h2>Cuplikan SoPaws</h2>
+        <button type="button" class="close" data-close aria-label="Tutup">×</button>
+      </header>
+      <div class="video-frame">
+        <p>Dashboard, antrean layanan, dan kasir dalam satu alur operasional.</p>
+        <button class="btn" type="button" data-open-demo data-close>Jadwalkan Demo</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="store-dialog" aria-labelledby="store-title">
+    <div class="dialog-card">
+      <button class="icon-x" type="button" data-close aria-label="Tutup">×</button>
+      <h3 id="store-title">Download SobatPaws</h3>
+      <p class="dialog-lead">Pilih toko yang sesuai dengan perangkat Anda.</p>
+      <div class="store-choices">
+        <a class="store" href="https://apps.apple.com/id/app/sobat-paws/id6785621846?l=id" target="_blank" rel="noopener noreferrer">App Store</a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.sobatpaws.user" target="_blank" rel="noopener noreferrer">Google Play</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/chrome.js"></script>
+  <script type="module" src="js/bee.js?v=hero6"></script>
+  <script src="js/bisnis.js?v=link6"></script>
+</body>
+</html>
