@@ -2,6 +2,7 @@ const nav = document.querySelector("#site-nav");
 const toggle = nav ? document.querySelector(".nav-toggle") : null;
 const demo = document.querySelector("#demo-modal");
 const video = document.querySelector("#video-modal");
+const dash = document.querySelector("#dash-pop");
 const form = document.querySelector("#demo-form");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const heroWash = document.querySelector(".hero__wash video");
@@ -220,37 +221,98 @@ function openModal(dialog) {
   if (dialog && !dialog.open) dialog.showModal();
 }
 
-const demoTitle = demo?.querySelector("h2");
-const demoLead = demo?.querySelector("header + p");
+const demoTitle = document.querySelector("#demo-title");
+const demoLead = document.querySelector("#demo-lead");
+const demoKicker = document.querySelector("#demo-kicker");
 const demoTitleDefault = demoTitle?.textContent || "";
 const demoLeadDefault = demoLead?.textContent || "";
+const demoKickerDefault = demoKicker?.textContent || "";
 
 document.querySelectorAll("[data-open-demo]").forEach((button) => {
   button.addEventListener("click", () => {
     video?.close();
-    if (demoTitle && demoLead) {
-      if (button.dataset.demo === "integrasi") {
+    const integrasi = button.dataset.demo === "integrasi";
+    if (form) form.dataset.mode = integrasi ? "integrasi" : "demo";
+    if (demoTitle && demoLead && demoKicker) {
+      if (integrasi) {
+        demoKicker.textContent = "Konsultasi";
         demoTitle.textContent = "Konsultasikan Integrasi";
-        demoLead.textContent = "Ceritakan sistem yang sudah berjalan. Tim SoPaws akan menghubungi untuk membahas integrasi.";
+        demoLead.textContent = "Ceritakan sistem yang sudah berjalan. Tim SoPaws membalas lewat WhatsApp.";
       } else {
+        demoKicker.textContent = demoKickerDefault;
         demoTitle.textContent = demoTitleDefault;
         demoLead.textContent = demoLeadDefault;
       }
     }
+    form?.querySelector(".demo-pop__error")?.setAttribute("hidden", "");
+    form?.querySelectorAll(".is-bad").forEach((field) => field.classList.remove("is-bad"));
     openModal(demo);
   });
 });
 
 document.querySelector("[data-open-video]")?.addEventListener("click", () => openModal(video));
 
+document.querySelectorAll("[data-open-dash]").forEach((button) => {
+  button.addEventListener("click", () => {
+    video?.close();
+    demo?.close();
+    openModal(dash);
+  });
+});
+
 document.querySelectorAll("[data-close]").forEach((button) => {
   button.addEventListener("click", () => button.closest("dialog")?.close());
 });
 
+demo?.addEventListener("click", (event) => {
+  if (event.target === demo) demo.close();
+});
+
+form?.addEventListener("input", (event) => {
+  event.target.classList?.remove("is-bad");
+});
+
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
-  form.querySelector(".form-ok").hidden = false;
-  form.querySelector(".btn").disabled = true;
+  const data = new FormData(form);
+  const nama = String(data.get("nama") || "").trim();
+  const bisnis = String(data.get("bisnis") || "").trim();
+  const wa = String(data.get("wa") || "").trim();
+  const jenis = String(data.get("jenis") || "").trim();
+  const catatan = String(data.get("catatan") || "").trim();
+  const digits = wa.replace(/\D/g, "");
+  const error = form.querySelector(".demo-pop__error");
+  const invalid = [
+    [form.nama, !nama],
+    [form.bisnis, !bisnis],
+    [form.wa, digits.length < 9 || digits.length > 15],
+    [form.jenis, !jenis]
+  ].filter(([, bad]) => bad).map(([field]) => field);
+
+  form.querySelectorAll(".is-bad").forEach((field) => field.classList.remove("is-bad"));
+  if (invalid.length) {
+    invalid.forEach((field) => field.classList.add("is-bad"));
+    if (error) error.hidden = false;
+    invalid[0].focus();
+    return;
+  }
+  if (error) error.hidden = true;
+
+  const integrasi = form.dataset.mode === "integrasi";
+  const lines = [
+    integrasi
+      ? "Halo SobatPaws, saya ingin konsultasi integrasi sistem."
+      : "Halo SobatPaws, saya ingin menjadwalkan demo.",
+    "",
+    `Nama: ${nama}`,
+    `Bisnis: ${bisnis}`,
+    `WhatsApp: ${wa}`,
+    `Jenis bisnis: ${jenis}`
+  ];
+  if (catatan) lines.push(`Catatan: ${catatan}`);
+  const url = `https://wa.me/6285117767264?text=${encodeURIComponent(lines.join("\n"))}`;
+  const opened = window.open(url, "_blank", "noopener,noreferrer");
+  if (!opened) window.location.assign(url);
 });
 
 const impact = document.querySelector("[data-impact]");
