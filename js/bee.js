@@ -8,6 +8,7 @@ const WING_TEX = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH
 const DESKTOP = [
   { x: -0.78, y: -0.72, s: 0.16, yaw: 210, pitch: 4, roll: 4 },
   { x: 0.86, y: 0.78, s: 0.22, yaw: 30, pitch: 4, roll: -4 },
+  { x: 0.15, y: -0.9, s: 0.13, yaw: 25, pitch: 4, roll: -2 },
   { x: -0.32, y: 0.22, s: 0.55, yaw: 145, pitch: 8, roll: 5 },
   { x: 0.3, y: -0.16, s: 0.58, yaw: 35, pitch: -4, roll: -6 },
   { x: 0.36, y: 0.3, s: 0.52, yaw: 35, pitch: 6, roll: -4 },
@@ -22,6 +23,7 @@ const DESKTOP = [
 const MOBILE = [
   { x: 0.9, y: 0.7, s: 0.14, yaw: 190, pitch: 4, roll: 2 },
   { x: 0.78, y: 0.82, s: 0.16, yaw: 125, pitch: 6, roll: 2 },
+  { x: 0.86, y: 0.9, s: 0.12, yaw: 140, pitch: 4, roll: 2 },
   { x: 0.12, y: 0.28, s: 0.5, yaw: 40, pitch: -6, roll: -8 },
   { x: 0.08, y: 0.24, s: 0.5, yaw: 160, pitch: 8, roll: 4 },
   { x: 0.1, y: 0.12, s: 0.8, yaw: 125, pitch: 10, roll: 6 },

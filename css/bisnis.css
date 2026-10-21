@@ -488,6 +488,46 @@ section { position: relative; min-height: 100vh; height: 100vh; overflow: hidden
   background: linear-gradient(180deg, #f7fcff 0%, #e7f4fb 100%);
   padding: 12vh 0 10vh;
 }
+#benefit { padding-bottom: calc(min(620px, 68vw) * 0.28125 + 40px); }
+#fitur { position: relative; z-index: 1; padding-top: calc(min(620px, 68vw) * 0.28125 + 40px); }
+.bridge {
+  height: 0;
+  min-height: 0;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  background: transparent;
+  z-index: 3;
+}
+.bridge__frame {
+  width: min(620px, 68%);
+  margin: 0;
+  transform: translateY(-50%);
+}
+.bridge__frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  animation:
+    bridge-in 0.8s ease both,
+    bridge-float 5.2s ease-in-out infinite;
+}
+@keyframes bridge-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes bridge-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 16px 34px rgba(12, 90, 112, 0.14);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.035);
+    box-shadow: 0 36px 60px rgba(12, 90, 112, 0.24);
+  }
+}
 .wrap { width: min(1160px, calc(100% - var(--pad) * 2)); margin-inline: auto; }
 .sheet .title, .band .title { max-width: 20ch; }
 .s3 .title { max-width: 16ch; }
@@ -1073,7 +1113,7 @@ section { position: relative; min-height: 100vh; height: 100vh; overflow: hidden
 @media (scripting: none), (prefers-reduced-motion: reduce) {
   .hero h1 .line span, .hero__lead, .hero__actions, .reveal { opacity: 1; transform: none; animation: none; }
   .loader { display: none; }
-  .flower, .monitor, [data-speed], .hero__portrait, .hero__node, .hero__anchor, .hero__pulse, .hero__pulse::after, .hero__links path, .hero__geo, .hero__cursor, .impact-card__go, .impact-card img, .s3 .solution-grid article, .benefit-art img, .benefit-card { transform: none !important; animation: none; }
+  .flower, .monitor, [data-speed], .hero__portrait, .hero__node, .hero__anchor, .hero__pulse, .hero__pulse::after, .hero__links path, .hero__geo, .hero__cursor, .impact-card__go, .impact-card img, .s3 .solution-grid article, .benefit-art img, .benefit-card, .bridge__frame img { transform: none !important; animation: none; }
   .impact-track { transition: none; }
   .hero__chip { left: 0; right: 0; margin-inline: auto; width: fit-content; }
 }
